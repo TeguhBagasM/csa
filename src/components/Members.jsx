@@ -9,6 +9,7 @@ import {
   FaLink,
   FaLinkedin,
   FaTiktok,
+  FaYoutube,
 } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -175,6 +176,19 @@ const Members = ({ darkMode }) => {
                       } transition-colors hover:text-blue-500`}
                     >
                       <FaGithub size={20} />
+                    </a>
+                  )}
+                  {member.socialMedia.youtube && (
+                    <a
+                      href={member.socialMedia.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Github"
+                      className={`${
+                        darkMode ? "text-gray-300" : "text-gray-600"
+                      } transition-colors hover:text-blue-500`}
+                    >
+                      <FaYoutube size={20} />
                     </a>
                   )}
                   {member.socialMedia.portfolio && (
