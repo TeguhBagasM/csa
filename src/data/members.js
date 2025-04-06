@@ -197,6 +197,58 @@ const members = [
     },
     image: memberCewe,
   },
+  {
+    name: "Rechan Dinata",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 7",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
+  {
+    name: "Fiko Abdigusti",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
+  {
+    name: "Zaidan Akmal Fauzan",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
+  {
+    name: "Alief Varied Fattarohman",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
 ];
 
 export default members;
