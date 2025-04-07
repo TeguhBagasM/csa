@@ -197,19 +197,19 @@ const members = [
     },
     image: memberCewe,
   },
-  // {
-  //   name: "Rechan Dinata",
-  //   position: "Anggota",
-  //   division: "Divisi pemrograman",
-  //   batch: "Angkatan 7",
-  //   socialMedia: {
-  //     instagram: "https://instagram.com/",
-  //     facebook: "https://facebook.com/",
-  //     linkedin: "https://linkedin.com/in/",
-  //     twitter: "https://twitter.com/",
-  //   },
-  //   image: memberCowo,
-  // },
+  {
+    name: "Rechan Dinata",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 7",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
   // {
   //   name: "Fiko Abdigusti",
   //   position: "Anggota",
