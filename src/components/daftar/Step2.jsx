@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaArrowLeft, FaExclamationCircle } from "react-icons/fa";
 
 const Step2 = ({ formData, handleChange, nextStep, prevStep, darkMode }) => {
-  const divisionOptions = ["Pemrograman", "Multimedia", "IOT", "Game"];
+  const divisionOptions = ["Pemrograman", "Multimedia"];
   const [divisionError, setDivisionError] = useState(false);
 
   const handleNextStep = () => {
