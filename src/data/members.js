@@ -174,7 +174,7 @@ const members = [
   {
     name: "Aditya Rizki Nugraha",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 6",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -187,7 +187,7 @@ const members = [
   {
     name: "Astri Fitriana Mustika",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 6",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -200,7 +200,7 @@ const members = [
   {
     name: "Wisnu Paujan",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 7",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -213,7 +213,7 @@ const members = [
   {
     name: "Rechan Dinata",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 7",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -226,7 +226,7 @@ const members = [
   {
     name: "Fiko Abdigusti",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -239,7 +239,7 @@ const members = [
   {
     name: "Rendi Gumilar Saputra",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -252,7 +252,7 @@ const members = [
   {
     name: "Zaidan Akmal Fauzan",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -265,7 +265,7 @@ const members = [
   {
     name: "Alief Varied Fattarohman",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -278,7 +278,20 @@ const members = [
   {
     name: "Muhammad Ramdan",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
+  {
+    name: "Oka Ramdani",
+    position: "Anggota",
+    division: "Divisi Multimedia",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -291,7 +304,7 @@ const members = [
   {
     name: "Naura Khoirunnisa",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -304,7 +317,7 @@ const members = [
   {
     name: "Aryanti",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -317,7 +330,7 @@ const members = [
   {
     name: "Vira Riska Nuraziza",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -328,9 +341,9 @@ const members = [
     image: memberCewe,
   },
   {
-    name: "Vira Riska Nuraziza",
+    name: "Dwi Rosa Handayani",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Pemrograman",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
@@ -341,9 +354,22 @@ const members = [
     image: memberCewe,
   },
   {
-    name: "Vira Riska Nuraziza",
+    name: "Mima Rahma Putri",
     position: "Anggota",
-    division: "Divisi pemrograman",
+    division: "Divisi Multimedia",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCewe,
+  },
+  {
+    name: "Naila Nawar Haura",
+    position: "Anggota",
+    division: "Divisi Multimedia",
     batch: "Angkatan 8",
     socialMedia: {
       instagram: "https://instagram.com/",
