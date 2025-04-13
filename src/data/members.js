@@ -341,6 +341,19 @@ const members = [
     image: memberCewe,
   },
   {
+    name: "Hanifa Febriana Fadillah",
+    position: "Anggota",
+    division: "Divisi Pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCewe,
+  },
+  {
     name: "Dwi Rosa Handayani",
     position: "Anggota",
     division: "Divisi Pemrograman",
