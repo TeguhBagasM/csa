@@ -237,6 +237,19 @@ const members = [
     image: memberCowo,
   },
   {
+    name: "Rendi Gumilar Saputra",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
+  {
     name: "Zaidan Akmal Fauzan",
     position: "Anggota",
     division: "Divisi pemrograman",
@@ -263,6 +276,19 @@ const members = [
     image: memberCowo,
   },
   {
+    name: "Muhammad Ramdan",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCowo,
+  },
+  {
     name: "Naura Khoirunnisa",
     position: "Anggota",
     division: "Divisi pemrograman",
@@ -277,6 +303,32 @@ const members = [
   },
   {
     name: "Aryanti",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCewe,
+  },
+  {
+    name: "Vira Riska Nuraziza",
+    position: "Anggota",
+    division: "Divisi pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/",
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+    },
+    image: memberCewe,
+  },
+  {
+    name: "Vira Riska Nuraziza",
     position: "Anggota",
     division: "Divisi pemrograman",
     batch: "Angkatan 8",
