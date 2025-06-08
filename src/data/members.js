@@ -284,6 +284,17 @@ const members = [
     image: memberCowo,
   },
   {
+    name: "Muhammad Raffi Saputra",
+    position: "Anggota",
+    division: "Divisi Pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      email: "mailto:ramdan111703@gmail.com",
+      instagram: "https://www.instagram.com/mochramkechils/",
+    },
+    image: memberCowo,
+  },
+  {
     name: "Oka Ramdani",
     position: "Anggota",
     division: "Divisi Multimedia",
