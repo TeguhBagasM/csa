@@ -248,7 +248,7 @@ const members = [
     image: memberCowo,
   },
   {
-    name: "Zaidan Akmal Fauzan",
+    name: "Alief Varied Fattarohman",
     position: "Anggota",
     division: "Divisi Pemrograman",
     batch: "Angkatan 8",
@@ -261,7 +261,7 @@ const members = [
     image: memberCowo,
   },
   {
-    name: "Alief Varied Fattarohman",
+    name: "Zaidan Akmal Fauzan",
     position: "Anggota",
     division: "Divisi Pemrograman",
     batch: "Angkatan 8",
@@ -348,6 +348,26 @@ const members = [
     socialMedia: {
       instagram: "https://instagram.com/ocaarrzy_",
       email: "mailto:dwrsaahandayani@gmail.com",
+    },
+    image: memberCewe,
+  },
+  {
+    name: "Dinarti geugeu marwah",
+    position: "Anggota",
+    division: "Divisi Pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
+    },
+    image: memberCewe,
+  },
+  {
+    name: "Novita Nur Fitriani",
+    position: "Anggota",
+    division: "Divisi Pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://instagram.com/",
     },
     image: memberCewe,
   },
