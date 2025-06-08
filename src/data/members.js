@@ -22,7 +22,6 @@ const members = [
     batch: "Angkatan 6",
     socialMedia: {
       instagram: "https://instagram.com/",
-      // email: "mailto:csaworks2017@gmail.com",
       linkedin: "https://linkedin.com/in/",
       twitter: "https://x.com/",
     },
