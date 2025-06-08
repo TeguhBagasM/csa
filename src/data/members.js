@@ -412,6 +412,18 @@ const members = [
     },
     image: memberCewe,
   },
+  {
+    name: "Ina Ristiyani",
+    position: "Anggota",
+    division: "Divisi Pemrograman",
+    batch: "Angkatan 8",
+    socialMedia: {
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://www.linkedin.com/in/",
+      github: "https://github.com/",
+    },
+    image: memberCewe,
+  },
 ];
 
 export default members;
