@@ -32,12 +32,52 @@ const Members = ({ darkMode }) => {
     <div className={`mt-5 ${darkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"}`}>
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold md:text-4xl text-center mb-10">Anggota CSA</h2>
+
+        {/* Custom CSS untuk pagination yang responsive */}
+        <style jsx>{`
+          .custom-pagination {
+            position: relative !important;
+            margin-top: 20px !important;
+            text-align: center !important;
+          }
+
+          .custom-bullet {
+            width: 10px !important;
+            height: 10px !important;
+            background: ${darkMode ? "#6b7280" : "#d1d5db"} !important;
+            border-radius: 50% !important;
+            opacity: 1 !important;
+            margin: 0 5px !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+          }
+
+          .custom-bullet-active {
+            background: ${darkMode ? "#3b82f6" : "#2563eb"} !important;
+            transform: scale(1.2) !important;
+          }
+
+          /* Hover effect untuk desktop */
+          .custom-bullet:hover {
+            background: ${darkMode ? "#60a5fa" : "#3b82f6"} !important;
+            transform: scale(1.1) !important;
+          }
+
+          /* Sembunyikan pagination di mobile */
+          @media (max-width: 768px) {
+            .custom-pagination {
+              display: none !important;
+            }
+          }
+        `}</style>
+
         <Swiper
           modules={[Navigation, Pagination]}
           pagination={{
             clickable: true,
             bulletClass: "swiper-pagination-bullet custom-bullet",
             bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
+            el: ".custom-pagination",
           }}
           spaceBetween={30}
           slidesPerView={1}
@@ -118,7 +158,7 @@ const Members = ({ darkMode }) => {
                       href={member.socialMedia.email}
                       target="_blank"
                       rel="noopener noreferrer"
-                      title="Linkedin"
+                      title="Email"
                       className={`${
                         darkMode ? "text-gray-300" : "text-gray-600"
                       } transition-colors hover:text-blue-500`}
@@ -183,7 +223,7 @@ const Members = ({ darkMode }) => {
                       href={member.socialMedia.youtube}
                       target="_blank"
                       rel="noopener noreferrer"
-                      title="Github"
+                      title="Youtube"
                       className={`${
                         darkMode ? "text-gray-300" : "text-gray-600"
                       } transition-colors hover:text-blue-500`}
@@ -209,6 +249,9 @@ const Members = ({ darkMode }) => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Custom pagination container */}
+        <div className="custom-pagination"></div>
       </div>
     </div>
   );
