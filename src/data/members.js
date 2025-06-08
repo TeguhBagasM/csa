@@ -2,6 +2,19 @@ import memberCowo from "../assets/members/cowo.svg";
 import memberCewe from "../assets/members/cewe.svg";
 
 const members = [
+  // {
+  //   name: "Pak Adi Raharjo",
+  //   position: "Pembina",
+  //   // division: "Divisi Pemrograman",
+  //   // batch: "Angkatan 6",
+  //   socialMedia: {
+  //     instagram: "https://instagram.com/teguhbagasm/",
+  //     linkedin: "https://linkedin.com/in/teguh-bagas-mardiansyah-8390572b7/",
+  //     portfolio: "https://thieverse.vercel.app/",
+  //     github: "https://github.com/TeguhBagasM",
+  //   },
+  //   image: memberCowo,
+  // },
   {
     name: "Teguh Bagas M",
     position: "Ketua",
