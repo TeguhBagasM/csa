@@ -23,8 +23,9 @@ const projectsData = {
       { name: "Dwi Rosa Handayani", role: "Angkatan 8" },
     ],
     timeline: [
-      { date: "Juni 2025", milestone: "Inisiasi dan perancangan sistem" },
-      { date: "Juli 2025", milestone: "Pengembangan dan uji coba" },
+      { date: "April 2025", milestone: "Inisiasi dan perancangan sistem" },
+      { date: "Mei 2025", milestone: "Pengembangan MVP" },
+      { date: "Juni 2025", milestone: "Uji Coba" },
       { date: "Juli 2025", milestone: "Rilis dan implementasi" },
     ],
     challenges: [
