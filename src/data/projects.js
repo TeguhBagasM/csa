@@ -1,10 +1,23 @@
 import quizzyCsa from "../assets/projects/pemrograman/quizzy.png";
-import spendWise from "../assets/projects/pemrograman/spendwise.png";
+import spendTvise from "../assets/projects/pemrograman/spendtvise.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 
 const projects = {
   programming: [
+    {
+      id: "panoricam",
+      title: "Panoricam",
+      description:
+        "Panoricam adalah layanan photobooth modern yang menghadirkan pengalaman berfoto seru dan kekinian untuk segala jenis acara.",
+      image: quizzyCsa,
+      techStack: ["Laravel", "Tailwind"],
+      year: "2024",
+      demoUrl: "https://csa-quizzy.vercel.app",
+      isRepo: false,
+      //   githubUrl: "https://github.com/TeguhBagasM/csa-quizzy",
+      status: "Completed",
+    },
     {
       id: "csa_quizzy",
       title: "CSA Quizzy",
@@ -15,7 +28,7 @@ const projects = {
       year: "2024",
       demoUrl: "https://csa-quizzy.vercel.app",
       isRepo: false,
-      //   githubUrl: "https://github.com/username/csa-quizzy",
+      //   githubUrl: "https://github.com/TeguhBagasM/csa-quizzy",
       status: "Completed",
     },
     {
@@ -23,7 +36,7 @@ const projects = {
       title: "Spendtvise",
       description:
         "Spendtvise adalah aplikasi atau sistem yang digunakan untuk mencatat, mengelola, dan menganalisis pengeluaran seseorang atau bisnis.",
-      image: spendWise,
+      image: spendTvise,
       techStack: ["React.js", "Express.js", "TailwindCSS", "Node.js"],
       year: "2025",
       demoUrl: "https://spendtvise.vercel.app/",

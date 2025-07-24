@@ -1,5 +1,5 @@
 import projectImage1 from "../assets/projects/pemrograman/quizzy.png";
-import projectImage2 from "../assets/projects/pemrograman/spendwise.png";
+import projectImage2 from "../assets/projects/pemrograman/spendtvise.png";
 
 const projectsData = {
   csa_quizzy: {
