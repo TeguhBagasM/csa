@@ -1,5 +1,6 @@
 import quizzyCsa from "../assets/projects/pemrograman/quizzy.png";
 import spendTvise from "../assets/projects/pemrograman/spendtvise.png";
+import panoriCam from "../assets/projects/pemrograman/panori.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 
@@ -10,7 +11,7 @@ const projects = {
       title: "Panoricam",
       description:
         "Panoricam adalah layanan photobooth modern yang menghadirkan pengalaman berfoto seru dan kekinian untuk segala jenis acara.",
-      image: quizzyCsa,
+      image: panoriCam,
       techStack: ["Laravel", "Tailwind"],
       year: "2025",
       demoUrl: "https://app.panoricam.fun/",
