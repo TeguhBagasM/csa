@@ -17,12 +17,10 @@ const Gallery = ({ darkMode }) => {
       AOS.refresh();
     });
 
-    // Membuat array gambar dengan deteksi format otomatis
     const loadImages = async () => {
       const imagePromises = [];
-      const totalImages = 11; // Jumlah total gambar
+      const totalImages = 12;
 
-      // Loop dari angka tinggi ke rendah
       for (let i = totalImages; i >= 1; i--) {
         const imagePromise = findWorkingImageFormat(i);
         imagePromises.push(imagePromise);
@@ -36,7 +34,6 @@ const Gallery = ({ darkMode }) => {
     loadImages();
   }, []);
 
-  // Fungsi untuk mencari format gambar yang bekerja
   const findWorkingImageFormat = async (imageNumber) => {
     const formats = ["jpg", "jpeg", "JPG", "JPEG"];
 
@@ -56,7 +53,6 @@ const Gallery = ({ darkMode }) => {
       }
     }
 
-    // Jika tidak ada format yang ditemukan, return null
     return null;
   };
 
