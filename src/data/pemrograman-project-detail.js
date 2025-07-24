@@ -16,7 +16,7 @@ const projectsData = {
       "Tampilan responsif dan interaktif",
       "Mode gelap (Dark Mode)",
     ],
-    team: [{ name: "Teguh Bagas M", role: "Web Developer" }],
+    team: [{ name: "Teguh Bagas M", role: "Ketua CSA" }],
 
     timeline: [
       { date: "November 2024", milestone: "Inisiasi Proyek" },
@@ -45,8 +45,8 @@ const projectsData = {
       "Mode gelap (Dark Mode)",
     ],
     team: [
-      { name: "Teguh Bagas M", role: "Web Developer" },
-      { name: "Fiko Abdigusti", role: "Web Developer" },
+      { name: "Teguh Bagas M", role: "Ketua CSA" },
+      { name: "Fiko Abdigusti", role: "Angkatan 8" },
     ],
 
     timeline: [

@@ -20,9 +20,9 @@ const projects = {
     },
     {
       id: "spendtvise",
-      title: "SpendWise",
+      title: "Spendtvise",
       description:
-        "SpendWise adalah aplikasi atau sistem yang digunakan untuk mencatat, mengelola, dan menganalisis pengeluaran seseorang atau bisnis.",
+        "Spendtvise adalah aplikasi atau sistem yang digunakan untuk mencatat, mengelola, dan menganalisis pengeluaran seseorang atau bisnis.",
       image: spendWise,
       techStack: ["React.js", "Express.js", "TailwindCSS", "Node.js"],
       year: "2025",
