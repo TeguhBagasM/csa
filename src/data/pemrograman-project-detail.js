@@ -1,6 +1,6 @@
 import projectImage1 from "../assets/projects/pemrograman/quizzy.png";
 import projectImage2 from "../assets/projects/pemrograman/spendtvise.png";
-import projectImage3 from "../assets/projects/pemrograman/spendtvise.png";
+import projectImage3 from "../assets/projects/pemrograman/panori.png";
 
 const projectsData = {
   panoricam: {
@@ -19,6 +19,8 @@ const projectsData = {
     team: [
       { name: "Fiko Abdigusti", role: "Angkatan 8" },
       { name: "Naura Khoirunnisa", role: "Angkatan 8" },
+      { name: "Rendi Gumilar Saputra", role: "Angkatan 8" },
+      { name: "Dwi Rosa Handayani", role: "Angkatan 8" },
     ],
     timeline: [
       { date: "Juni 2025", milestone: "Inisiasi dan perancangan sistem" },
