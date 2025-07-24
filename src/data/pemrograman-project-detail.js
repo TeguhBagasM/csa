@@ -1,7 +1,36 @@
 import projectImage1 from "../assets/projects/pemrograman/quizzy.png";
 import projectImage2 from "../assets/projects/pemrograman/spendtvise.png";
+import projectImage3 from "../assets/projects/pemrograman/spendtvise.png";
 
 const projectsData = {
+  panoricam: {
+    title: "Panoricam",
+    description:
+      "Panoricam adalah layanan photobooth modern berbasis web yang dibangun menggunakan Laravel dan Tailwind CSS. Aplikasi ini memungkinkan pengguna mengabadikan momen spesial dengan mudah dan cepat melalui antarmuka yang responsif dan tampilan modern. Setiap foto langsung dihasilkan secara digital dan dapat diakses atau dibagikan secara instan.",
+    image: projectImage3,
+    demoLink: "https://app.panoricam.fun/",
+    tech: ["Laravel", "TailwindCSS"],
+    features: [
+      "Pengambilan foto otomatis",
+      "Galeri digital instan",
+      "Desain responsif dan modern",
+      "Antarmuka mudah digunakan",
+    ],
+    team: [
+      { name: "Fiko Abdigusti", role: "Angkatan 8" },
+      { name: "Naura Khoirunnisa", role: "Angkatan 8" },
+    ],
+    timeline: [
+      { date: "Juni 2025", milestone: "Inisiasi dan perancangan sistem" },
+      { date: "Juli 2025", milestone: "Pengembangan dan uji coba" },
+      { date: "Juli 2025", milestone: "Rilis dan implementasi" },
+    ],
+    challenges: [
+      "Membuat sistem photobooth otomatis berbasis web",
+      "Mengelola performa dan kecepatan akses di hosting shared (Niagahoster)",
+      "Menyesuaikan tampilan agar optimal di berbagai perangkat",
+    ],
+  },
   csa_quizzy: {
     title: "CSA Quizzy",
     description:
