@@ -16,7 +16,7 @@ import SimpleChatbaseWidget from "./components/SimpleChatbaseWidget";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -52,7 +52,7 @@ function App() {
             />
             <Route path="/project" element={<Project darkMode={darkMode} />} />
             <Route path="/blog" element={<Blog darkMode={darkMode} />} />
-            {/* <Route path="/daftar" element={<Daftar darkMode={darkMode} />} /> */}
+            <Route path="/daftar" element={<Daftar darkMode={darkMode} />} />
             <Route
               path="/project-pemrograman/:id"
               element={<PemrogramanProjectDetail darkMode={darkMode} />}

@@ -116,7 +116,7 @@ const Step3 = ({
         FaWhatsapp,
         "whatsapp.com/grup-angkatan-viii",
         "Sudah Gabung",
-        "https://chat.whatsapp.com/E1ZrShm3oKg7QdQpOVgFF8",
+        "https://chat.whatsapp.com/H9a3WwRG0iaLHnsKGQ66Wj",
         "waProof"
       )}
 

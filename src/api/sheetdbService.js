@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const SHEETDB_API_URL = "https://sheetdb.io/api/v1/ii4bl74nq2i73";
+const SHEETDB_API_URL = "https://sheetdb.io/api/v1/gfetfcqdsq9qm";
 
 export const checkEmailExists = async (email) => {
   try {
