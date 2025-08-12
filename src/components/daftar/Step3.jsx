@@ -114,7 +114,7 @@ const Step3 = ({
 
       {renderSocialMediaCard(
         FaWhatsapp,
-        "whatsapp.com/grup-angkatan-viii",
+        "whatsapp.com/grup-angkatan-ix",
         "Sudah Gabung",
         "https://chat.whatsapp.com/H9a3WwRG0iaLHnsKGQ66Wj",
         "waProof"
