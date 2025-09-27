@@ -76,7 +76,7 @@ const Gallery = ({ darkMode }) => {
           darkMode ? "text-gray-100" : "text-gray-800"
         } text-3xl font-bold md:text-4xl text-center mb-10 mt-10`}
       >
-        Gallery CSA
+        Program & Kegiatan CSA
       </div>
 
       <div

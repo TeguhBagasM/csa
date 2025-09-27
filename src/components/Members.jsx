@@ -34,7 +34,7 @@ const Members = ({ darkMode }) => {
         <h2 className="text-3xl font-bold md:text-4xl text-center mb-10">Anggota CSA</h2>
 
         {/* Custom CSS untuk pagination yang responsive */}
-        <style jsx>{`
+        <style jsx="true">{`
           .custom-pagination {
             position: relative !important;
             margin-top: 20px !important;

@@ -17,8 +17,8 @@ const Home = ({ isRegistrationOpen, darkMode }) => {
         <Tentang darkMode={darkMode} />
         {/* <Pembina darkMode={darkMode} /> */}
         <Members darkMode={darkMode} />
-        <Divisions darkMode={darkMode} />
         <Gallery darkMode={darkMode} />
+        <Divisions darkMode={darkMode} />
         <Footer darkMode={darkMode} />
       </div>
     </>
