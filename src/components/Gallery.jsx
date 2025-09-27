@@ -19,7 +19,7 @@ const Gallery = ({ darkMode }) => {
 
     const loadImages = async () => {
       const imagePromises = [];
-      const totalImages = 12;
+      const totalImages = 13;
 
       for (let i = totalImages; i >= 1; i--) {
         const imagePromise = findWorkingImageFormat(i);
