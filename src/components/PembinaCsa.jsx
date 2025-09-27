@@ -41,7 +41,6 @@ const PembinaFounder = ({ darkMode = false }) => {
     },
   };
 
-  // Data Founder yang sudah disesuaikan dengan request Anda (5 orang)
   const foundersData = [
     {
       id: 1,
@@ -53,7 +52,7 @@ const PembinaFounder = ({ darkMode = false }) => {
     {
       id: 2,
       name: "Kang Febri",
-      position: "Chief Technology Officer",
+      position: "HR BCA",
       image:
         "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face",
     },
@@ -80,7 +79,6 @@ const PembinaFounder = ({ darkMode = false }) => {
     },
   ];
 
-  // Pembina Detail Component
   const PembinaDetail = () => (
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -88,7 +86,7 @@ const PembinaFounder = ({ darkMode = false }) => {
         <div
           className={`${
             darkMode ? "bg-gray-800" : "bg-white"
-          } rounded-2xl shadow-xl p-8 transition-all duration-500 hover:shadow-2xl group`}
+          } rounded-2xl shadow-xl p-8 transition-all duration-500 group`}
           data-aos="fade-right"
         >
           <div className="text-center">
@@ -96,7 +94,7 @@ const PembinaFounder = ({ darkMode = false }) => {
               <img
                 src={pembinaData.image}
                 alt={pembinaData.name}
-                className="w-full h-full object-cover rounded-full shadow-lg ring-4 ring-blue-500/20 transition-all duration-500 group-hover:ring-blue-500/40 group-hover:scale-105"
+                className="w-full h-full object-cover rounded-full shadow-lg ring-4 ring-blue-500/20 transition-all duration-500 group-hover:ring-blue-500/40"
               />
             </div>
             <h2 className={`text-3xl font-bold mb-2 ${darkMode ? "text-gray-100" : "text-gray-800"}`}>
@@ -164,7 +162,6 @@ const PembinaFounder = ({ darkMode = false }) => {
     </div>
   );
 
-  // Founders Grid Component - Disederhanakan sesuai contoh gambar
   const FoundersGrid = () => (
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,7 +170,7 @@ const PembinaFounder = ({ darkMode = false }) => {
             key={founder.id}
             className={`${
               darkMode ? "bg-gray-800" : "bg-white"
-            } rounded-2xl shadow-lg p-8 text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2`}
+            } rounded-2xl shadow-lg p-8 text-center transition-all duration-500 hover:shadow-xl`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
