@@ -6,7 +6,7 @@ import Gallery from "../components/Gallery";
 import Footer from "../components/layouts/Footer";
 import Members from "../components/Members";
 import Divisions from "./Divisions";
-// import Pembina from "../components/PembinaCsa";
+import Pembina from "../components/PembinaCsa";
 
 const Home = ({ isRegistrationOpen, darkMode }) => {
   return (
@@ -15,7 +15,7 @@ const Home = ({ isRegistrationOpen, darkMode }) => {
         <Hero darkMode={darkMode} isRegistrationOpen={isRegistrationOpen} />
         <MengapaKami darkMode={darkMode} />
         <Tentang darkMode={darkMode} />
-        {/* <Pembina darkMode={darkMode} /> */}
+        <Pembina darkMode={darkMode} />
         <Members darkMode={darkMode} />
         <Gallery darkMode={darkMode} />
         <Divisions darkMode={darkMode} />
