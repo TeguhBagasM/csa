@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import notFoundImage from "../assets/notfound/404.svg";
 
 function NotFound({ darkMode }) {
@@ -8,9 +9,9 @@ function NotFound({ darkMode }) {
       <p className={`text-xl mb-4 ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
         Halaman tidak ditemukan
       </p>
-      <a href="/" className="text-blue-500 hover:text-blue-700">
+      <Link to="/" className="text-blue-500 hover:text-blue-700 transition-colors duration-200">
         Kembali ke Beranda
-      </a>
+      </Link>
     </div>
   );
 }

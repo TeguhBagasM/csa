@@ -73,7 +73,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                     darkMode ? "text-gray-300" : "text-gray-500"
                   }`}
                 >
-                  {["Beranda", "Project"].map((item) => (
+                  {["Beranda", "Proyek"].map((item) => (
                     <li key={item} className="relative group">
                       <Link
                         to={item === "Beranda" ? "/" : `/${item.toLowerCase()}`}

@@ -50,7 +50,7 @@ function App() {
               path="/"
               element={<Home darkMode={darkMode} isRegistrationOpen={isRegistrationOpen} />}
             />
-            <Route path="/project" element={<Project darkMode={darkMode} />} />
+            <Route path="/projects" element={<Project darkMode={darkMode} />} />
             <Route path="/blog" element={<Blog darkMode={darkMode} />} />
             <Route path="/daftar" element={<Daftar darkMode={darkMode} />} />
             <Route

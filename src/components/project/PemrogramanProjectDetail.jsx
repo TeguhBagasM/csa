@@ -42,7 +42,7 @@ const ProjectDetail = ({ darkMode }) => {
   const MobileView = () => (
     <div className="block md:hidden w-full min-h-screenpt-20 px-4 mt-24">
       <button
-        onClick={() => navigate("/project")}
+        onClick={() => navigate("/projects")}
         data-aos="fade-right"
         className={`mb-4 flex items-center gap-2 transition-colors ${
           darkMode ? "text-gray-300 hover:text-blue-400" : "text-gray-700 hover:text-blue-600"
@@ -177,9 +177,9 @@ const ProjectDetail = ({ darkMode }) => {
   const DesktopView = () => (
     <div className="hidden md:block w-full min-h-screen pt-34 mt-6 px-4 relative overflow-hidden">
       <button
-        onClick={() => navigate("/project")}
+        onClick={() => navigate("/projects")}
         data-aos="fade-right"
-        className={`absolute top-20 left-8 flex items-center gap-2 transition-colors ${
+        className={`absolute top-20 cursor-pointer left-8 flex items-center gap-2 transition-colors ${
           darkMode ? "text-gray-300 hover:text-blue-400" : "text-gray-700 hover:text-blue-600"
         }`}
       >
