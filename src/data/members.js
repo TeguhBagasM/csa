@@ -315,16 +315,6 @@ const members = [
     image: memberCewe,
   },
   {
-    name: "Dinarti geugeu marwah",
-    position: "Anggota",
-    division: "Divisi Pemrograman",
-    batch: "Angkatan 8",
-    socialMedia: {
-      instagram: "https://instagram.com/",
-    },
-    image: memberCewe,
-  },
-  {
     name: "Novita Nur Fitriani",
     position: "Anggota",
     division: "Divisi Pemrograman",
@@ -348,7 +338,7 @@ const members = [
   },
   {
     name: "Mima Rahma Putri",
-    position: "Anggota",
+    position: "Tim Kreatif",
     division: "Divisi Multimedia",
     batch: "Angkatan 8",
     socialMedia: {
@@ -360,7 +350,7 @@ const members = [
   },
   {
     name: "Naila Nawar Haura",
-    position: "Anggota",
+    position: "Tim Kreatif",
     division: "Divisi Multimedia",
     batch: "Angkatan 8",
     socialMedia: {

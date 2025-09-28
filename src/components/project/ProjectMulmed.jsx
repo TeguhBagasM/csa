@@ -46,6 +46,10 @@ const ProjectMultimedia = ({ darkMode }) => {
     setActiveProjectIndex(activeProjectIndex === index ? null : index);
   };
 
+  const hasDetailPage = (project) => {
+    return project.hasDetail !== false && project.id;
+  };
+
   if (projects.length === 0) {
     return (
       <div
@@ -126,16 +130,19 @@ const ProjectMultimedia = ({ darkMode }) => {
                 >
                   {project.title}
                 </h3>
-                <button
-                  onClick={() => handleDetail(project.id)}
-                  className={`${
-                    darkMode
-                      ? "text-gray-400 hover:bg-gray-600 hover:text-white"
-                      : "text-gray-500 hover:bg-gray-200 hover:text-black"
-                  } px-3 py-1 rounded text-sm flex cursor-pointer items-center gap-1`}
-                >
-                  <FaRegEye /> Detail
-                </button>
+                {/* Tombol detail hanya muncul jika project memiliki halaman detail */}
+                {hasDetailPage(project) && (
+                  <button
+                    onClick={() => handleDetail(project.id)}
+                    className={`${
+                      darkMode
+                        ? "text-gray-400 hover:bg-gray-600 hover:text-white"
+                        : "text-gray-500 hover:bg-gray-200 hover:text-black"
+                    } px-3 py-1 rounded text-sm flex cursor-pointer items-center gap-1`}
+                  >
+                    <FaRegEye /> Detail
+                  </button>
+                )}
               </div>
               <span
                 className={`

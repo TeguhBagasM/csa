@@ -4,6 +4,7 @@ import panoriCam from "../assets/projects/pemrograman/panori.png";
 import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
+import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
 
 const projects = {
   programming: [
@@ -70,6 +71,17 @@ const projects = {
       demoUrl:
         "https://www.figma.com/proto/RtIb7yHoLK2tDGd7UmTYta/mockup-1?node-id=2206-87&scaling=scale-down&content-scaling=fixed&page-id=2162%3A353&starting-point-node-id=2256%3A825",
       category: "UI/UX Design",
+    },
+    {
+      id: "hot_chocolate",
+      title: "Hot Chocolate",
+      hasDetail: false,
+      description:
+        "Hot Chocolate adalah proyek animasi 3D yang dibuat menggunakan Blender dan dirancang untuk menampilkan kehangatan suasana saat menikmati secangkir cokelat panas. Melalui animasi ini, penonton diajak merasakan sensasi nyaman dan estetika visual yang lembut, dipadukan dengan pencahayaan dan tekstur realistis yang memperkuat suasana cozy.",
+      image: Mulmed2,
+      techStack: ["Blender"],
+      demoUrl: "https://youtube.com/shorts/531_L_YFIIU?si=vG3gbvwHzA7We1Ow",
+      category: "Animasi",
     },
   ],
 };
