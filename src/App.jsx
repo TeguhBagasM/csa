@@ -50,15 +50,15 @@ function App() {
               path="/"
               element={<Home darkMode={darkMode} isRegistrationOpen={isRegistrationOpen} />}
             />
-            <Route path="/projects" element={<Project darkMode={darkMode} />} />
+            <Route path="/karya" element={<Project darkMode={darkMode} />} />
             <Route path="/blog" element={<Blog darkMode={darkMode} />} />
             <Route path="/daftar" element={<Daftar darkMode={darkMode} />} />
             <Route
-              path="/project-pemrograman/:id"
+              path="/karya-pemrograman/:id"
               element={<PemrogramanProjectDetail darkMode={darkMode} />}
             />
             <Route
-              path="/project-multimedia/:id"
+              path="/karya-multimedia/:id"
               element={<MulmedProjectDetail darkMode={darkMode} />}
             />
             <Route path="*" element={<NotFound darkMode={darkMode} />} />

@@ -43,7 +43,7 @@ const ProjectPemrograman = ({ darkMode }) => {
   }, [darkMode]);
 
   const handleDetail = (projectId) => {
-    navigate(`/project-pemrograman/${projectId}`);
+    navigate(`/karya-pemrograman/${projectId}`);
   };
 
   const handleProjectPress = (index) => {

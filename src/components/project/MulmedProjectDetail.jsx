@@ -39,7 +39,7 @@ const ProjectDetail = ({ darkMode }) => {
       <div className="container mx-auto px-4 py-8">
         {/* Back Button */}
         <Link
-          to="/projects"
+          to="/karya"
           className={`inline-flex cursor-pointer items-center gap-2 mb-8 ${
             darkMode ? "text-gray-300 hover:text-white" : "text-gray-600 hover:text-gray-800"
           }`}

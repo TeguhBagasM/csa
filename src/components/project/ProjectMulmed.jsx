@@ -40,7 +40,7 @@ const ProjectMultimedia = ({ darkMode }) => {
   }, [darkMode]);
 
   const handleDetail = (projectId) => {
-    navigate(`/project-multimedia/${projectId}`);
+    navigate(`/karya-multimedia/${projectId}`);
   };
 
   const handleProjectPress = (index) => {
