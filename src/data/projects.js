@@ -1,11 +1,25 @@
 import quizzyCsa from "../assets/projects/pemrograman/quizzy.png";
 import spendTvise from "../assets/projects/pemrograman/spendtvise.png";
 import panoriCam from "../assets/projects/pemrograman/panori.png";
+import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 
 const projects = {
   programming: [
+    {
+      id: "csatasktify",
+      title: "CSA Tasktify",
+      description:
+        "CSA Tasktify, sebuah website To-Do List App yang dibangun menggunakan React.js, Tailwind CSS, dan Supabase sebagai backend database. Aplikasi ini dirancang untuk membantu pengguna mengelola aktivitas secara terstruktur melalui sistem kategori, task, dan subtask, serta dilengkapi dengan fitur notes untuk mencatat detail penting setiap task.",
+      image: csaTasktify,
+      techStack: ["React.js", "Typescript", "Tailwind", "Supabase"],
+      year: "2025",
+      demoUrl: "https://csa-tasktify.vercel.app/",
+      isRepo: false,
+      //   githubUrl: "https://github.com/TeguhBagasM/csa-quizzy",
+      status: "Completed",
+    },
     {
       id: "panoricam",
       title: "Panoricam",
@@ -14,7 +28,7 @@ const projects = {
       image: panoriCam,
       techStack: ["Laravel", "Tailwind"],
       year: "2025",
-      demoUrl: "https://app.panoricam.fun/",
+      // demoUrl: "https://app.panoricam.fun/",
       isRepo: false,
       //   githubUrl: "https://github.com/TeguhBagasM/csa-quizzy",
       status: "Completed",

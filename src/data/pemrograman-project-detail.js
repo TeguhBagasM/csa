@@ -1,8 +1,34 @@
 import projectImage1 from "../assets/projects/pemrograman/quizzy.png";
 import projectImage2 from "../assets/projects/pemrograman/spendtvise.png";
 import projectImage3 from "../assets/projects/pemrograman/panori.png";
+import projectImage4 from "../assets/projects/pemrograman/csa-tasktify.png";
 
 const projectsData = {
+  csatasktify: {
+    title: "CSA Tasktify",
+    description:
+      "CSA Tasktify adalah aplikasi To-Do List berbasis web yang dibangun menggunakan React.js, Tailwind CSS, dan Supabase. Aplikasi ini dirancang untuk membantu pengguna mengelola aktivitas secara terorganisir melalui sistem kategori, task, dan subtask. Setiap task dapat memiliki catatan (notes) untuk menyimpan detail penting, menjadikan CSA Tasktify solusi efektif dalam mengatur kegiatan seperti kuliah, magang, maupun proyek pribadi dengan tampilan yang modern, intuitif, dan responsif.",
+    image: projectImage4,
+    demoLink: "https://csa-tasktify.vercel.app/",
+    tech: ["React.js", "TailwindCSS", "Supabase"],
+    features: [
+      "Manajemen kategori (kuliah, magang, proyek, dll)",
+      "Pembuatan task dan subtask yang terstruktur",
+      "Fitur notes untuk mencatat detail tambahan",
+      "Antarmuka modern, ringan, dan responsif",
+      "Sinkronisasi data real-time menggunakan Supabase",
+    ],
+    team: [{ name: "Teguh Bagas M", role: "Ketua CSA" }],
+    timeline: [
+      { date: "September 2025", milestone: "Perancangan fitur dan struktur database" },
+      { date: "Oktober 2025", milestone: "Uji coba dan optimalisasi Rilis versi publik" },
+    ],
+    challenges: [
+      "Membangun relasi dinamis antara kategori, task, dan subtask di Supabase",
+      "Mengimplementasikan sistem notes yang efisien per task",
+      "Menjaga performa dan responsivitas UI di berbagai perangkat",
+    ],
+  },
   panoricam: {
     title: "Panoricam",
     description:
