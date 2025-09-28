@@ -140,7 +140,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
             </div>
 
             <ul className="flex flex-col px-4">
-              {["Beranda", "Project"].map((item) => (
+              {["Beranda", "Karya"].map((item) => (
                 <li key={item} className="py-3" onClick={toggleMenu}>
                   <Link
                     to={item === "Beranda" ? "/" : `/${item.toLowerCase()}`}
