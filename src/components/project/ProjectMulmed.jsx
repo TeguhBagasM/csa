@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import dataMultimedia from "../../data/projects";
 import Nodata from "../../assets/nodata.png";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiX } from "react-icons/fi";
 import { FaEye, FaRegEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
@@ -11,6 +11,7 @@ const ProjectMultimedia = ({ darkMode }) => {
   const projects = dataMultimedia.multimedia || [];
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [activeProjectIndex, setActiveProjectIndex] = useState(null);
+  const [modalProject, setModalProject] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -46,7 +47,38 @@ const ProjectMultimedia = ({ darkMode }) => {
     setActiveProjectIndex(activeProjectIndex === index ? null : index);
   };
 
+  const openModal = (project) => {
+    setModalProject(project);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    setModalProject(null);
+    document.body.style.overflow = "unset";
+  };
+
+  // Close modal when clicking outside
+  const handleModalClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
+  // Close modal on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && modalProject) {
+        closeModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [modalProject]);
+
+  // Fungsi untuk mengecek apakah project memiliki halaman detail
   const hasDetailPage = (project) => {
+    // Jika hasDetail tidak didefinisikan, default ke true (ada tombol detail)
+    // Jika hasDetail: false, maka tidak ada tombol detail
     return project.hasDetail !== false && project.id;
   };
 
@@ -130,8 +162,8 @@ const ProjectMultimedia = ({ darkMode }) => {
                 >
                   {project.title}
                 </h3>
-                {/* Tombol detail hanya muncul jika project memiliki halaman detail */}
-                {hasDetailPage(project) && (
+                {/* Tombol detail atau modal berdasarkan hasDetailPage */}
+                {hasDetailPage(project) ? (
                   <button
                     onClick={() => handleDetail(project.id)}
                     className={`${
@@ -141,6 +173,17 @@ const ProjectMultimedia = ({ darkMode }) => {
                     } px-3 py-1 rounded text-sm flex cursor-pointer items-center gap-1`}
                   >
                     <FaRegEye /> Detail
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => openModal(project)}
+                    className={`${
+                      darkMode
+                        ? "text-gray-400 hover:bg-gray-600 hover:text-white"
+                        : "text-gray-500 hover:bg-gray-200 hover:text-black"
+                    } px-3 py-1 rounded text-sm flex cursor-pointer items-center gap-1`}
+                  >
+                    <FaEye /> Lihat
                   </button>
                 )}
               </div>
@@ -180,6 +223,135 @@ const ProjectMultimedia = ({ darkMode }) => {
           </div>
         );
       })}
+
+      {/* Modal untuk menampilkan project detail */}
+      {modalProject && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={handleModalClick}
+        >
+          <div
+            className={`
+              relative max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-lg
+              ${darkMode ? "bg-gray-800" : "bg-white"}
+            `}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className={`
+                absolute cursor-pointer top-4 right-4 z-10 p-2 rounded-full
+                ${
+                  darkMode
+                    ? "bg-gray-700 text-white hover:bg-gray-600"
+                    : "bg-white text-gray-800 hover:bg-gray-100"
+                }
+                shadow-lg transition-colors
+              `}
+            >
+              <FiX className="text-xl" />
+            </button>
+
+            {/* Modal content */}
+            <div className="p-6">
+              {/* Image */}
+              <div className="mb-6">
+                <img
+                  src={modalProject.image}
+                  alt={modalProject.title}
+                  className="w-full h-auto max-h-96 object-contain rounded-lg"
+                />
+              </div>
+
+              {/* Project info */}
+              <div className="space-y-4">
+                <div className="flex flex-wrap items-start gap-4">
+                  <h2
+                    className={`text-2xl font-bold flex-1 ${
+                      darkMode ? "text-white" : "text-gray-800"
+                    }`}
+                  >
+                    {modalProject.title}
+                  </h2>
+                  {modalProject.demoUrl && (
+                    <a
+                      href={modalProject.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg 
+                      hover:bg-blue-600 transition-colors font-medium"
+                    >
+                      <FiExternalLink />
+                      Demo
+                    </a>
+                  )}
+                </div>
+
+                {/* Creator/Author info */}
+                {modalProject.creator && (
+                  <div
+                    className={`flex items-center gap-2 ${
+                      darkMode ? "text-gray-300" : "text-gray-600"
+                    }`}
+                  >
+                    <span className="font-medium">Dibuat oleh:</span>
+                    <span className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}>
+                      {Array.isArray(modalProject.creator)
+                        ? modalProject.creator.join(", ")
+                        : modalProject.creator}
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <span
+                    className={`
+                      text-sm px-3 py-1 rounded-full
+                      ${darkMode ? "bg-blue-500/20 text-blue-300" : "bg-blue-100 text-blue-600"}
+                    `}
+                  >
+                    {modalProject.category}
+                  </span>
+
+                  {modalProject.year && (
+                    <span
+                      className={`
+                        text-sm px-3 py-1 rounded-full
+                        ${darkMode ? "bg-green-500/20 text-green-300" : "bg-green-100 text-green-600"}
+                      `}
+                    >
+                      {modalProject.year}
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {modalProject.techStack.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className={`
+                        text-sm px-3 py-1 rounded-full
+                        ${darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-600"}
+                      `}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <p
+                  className={`text-base leading-relaxed ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
+                >
+                  {modalProject.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

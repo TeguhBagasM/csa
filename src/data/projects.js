@@ -5,6 +5,7 @@ import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
+import Mulmed3 from "../assets/projects/multimedia/mulmed3.jpg";
 
 const projects = {
   programming: [
@@ -76,12 +77,27 @@ const projects = {
       id: "hot_chocolate",
       title: "Hot Chocolate",
       hasDetail: false,
+      creator: "Muhammad Sidqi R",
       description:
         "Hot Chocolate adalah proyek animasi 3D yang dibuat menggunakan Blender dan dirancang untuk menampilkan kehangatan suasana saat menikmati secangkir cokelat panas. Melalui animasi ini, penonton diajak merasakan sensasi nyaman dan estetika visual yang lembut, dipadukan dengan pencahayaan dan tekstur realistis yang memperkuat suasana cozy.",
       image: Mulmed2,
       techStack: ["Blender"],
       demoUrl: "https://youtube.com/shorts/531_L_YFIIU?si=vG3gbvwHzA7We1Ow",
       category: "Animasi",
+      year: "2025",
+    },
+    {
+      id: "poster_promosi",
+      title: "Poster Promosi",
+      hasDetail: false,
+      creator: "Muhammad Sidqi R",
+      description:
+        "Poster Promosi adalah proyek desain grafis yang dibuat menggunakan Adobe Illustrator dengan tujuan membantu perusahaan di bidang jasa dalam mempromosikan layanan mereka secara menarik dan profesional. Melalui poster ini, pembelajar menonjolkan kemampuan dalam mengolah elemen visual seperti tipografi, warna, dan komposisi untuk menciptakan desain yang komunikatif dan estetis",
+      image: Mulmed3,
+      techStack: ["Adobe Ilustrator"],
+      // demoUrl: "-",
+      category: "Poster",
+      year: "2025",
     },
   ],
 };
