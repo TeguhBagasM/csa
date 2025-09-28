@@ -21,7 +21,7 @@ const projectsData = {
     team: [{ name: "Teguh Bagas M", role: "Ketua CSA" }],
     timeline: [
       { date: "September 2025", milestone: "Perancangan fitur dan struktur database" },
-      { date: "Oktober 2025", milestone: "Uji coba dan optimalisasi Rilis versi publik" },
+      { date: "September 2025", milestone: "Uji coba dan optimalisasi Rilis versi publik" },
     ],
     challenges: [
       "Membangun relasi dinamis antara kategori, task, dan subtask di Supabase",

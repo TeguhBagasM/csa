@@ -195,19 +195,6 @@ const members = [
     image: memberCewe,
   },
   {
-    name: "Wisnu Paujan",
-    position: "Anggota",
-    division: "Divisi Pemrograman",
-    batch: "Angkatan 7",
-    socialMedia: {
-      instagram: "https://instagram.com/wisnuvauzannrarvn",
-      email: "mailto:wisnupaujan885@gmail.com",
-      linkedin: "https://linkedin.com/in/",
-      twitter: "https://twitter.com/",
-    },
-    image: memberCowo,
-  },
-  {
     name: "Rechan Dinata",
     position: "Anggota",
     division: "Divisi Pemrograman",
@@ -260,19 +247,6 @@ const members = [
     image: memberCowo,
   },
   {
-    name: "Zaidan Akmal Fauzan",
-    position: "Anggota",
-    division: "Divisi Pemrograman",
-    batch: "Angkatan 8",
-    socialMedia: {
-      instagram: "https://instagram.com/",
-      facebook: "https://facebook.com/",
-      linkedin: "https://linkedin.com/in/",
-      twitter: "https://twitter.com/",
-    },
-    image: memberCowo,
-  },
-  {
     name: "Muhammad Ramdan",
     position: "Anggota",
     division: "Divisi Pemrograman",
@@ -280,27 +254,6 @@ const members = [
     socialMedia: {
       email: "mailto:ramdan111703@gmail.com",
       instagram: "https://www.instagram.com/mochramkechils/",
-    },
-    image: memberCowo,
-  },
-  {
-    name: "Muhammad Raffi Saputra",
-    position: "Anggota",
-    division: "Divisi Pemrograman",
-    batch: "Angkatan 8",
-    socialMedia: {
-      email: "mailto:ramdan111703@gmail.com",
-      instagram: "https://www.instagram.com/mochramkechils/",
-    },
-    image: memberCowo,
-  },
-  {
-    name: "Oka Ramdani",
-    position: "Anggota",
-    division: "Divisi Multimedia",
-    batch: "Angkatan 8",
-    socialMedia: {
-      instagram: "https://www.instagram.com/",
     },
     image: memberCowo,
   },

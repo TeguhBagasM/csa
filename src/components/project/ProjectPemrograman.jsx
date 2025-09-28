@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import dataPemrograman from "../../data/projects";
 import Nodata from "../../assets/nodata.png";
 import { FiExternalLink } from "react-icons/fi";
-import { FaEye, FaGithub, FaRegEye } from "react-icons/fa";
+import { FaGithub, FaRegEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -146,10 +146,11 @@ const ProjectPemrograman = ({ darkMode }) => {
                 </h3>
                 <button
                   onClick={() => handleDetail(project.id)}
-                  className={`${darkMode
-                    ? "text-gray-400 hover:bg-gray-600 hover:text-white"
-                    : "text-gray-500 hover:bg-gray-200 hover:text-black"
-                    } px-3 py-1 rounded text-sm flex cursor-pointer items-center gap-1`}
+                  className={`${
+                    darkMode
+                      ? "text-gray-400 hover:bg-gray-600 hover:text-white"
+                      : "text-gray-500 hover:bg-gray-200 hover:text-black"
+                  } px-3 py-1 rounded text-sm flex cursor-pointer items-center gap-1`}
                 >
                   <FaRegEye /> Detail
                 </button>
