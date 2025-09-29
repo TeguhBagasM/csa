@@ -6,6 +6,7 @@ import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
 import Mulmed3 from "../assets/projects/multimedia/mulmed3.jpg";
+import Mulmed4 from "../assets/projects/multimedia/mulmed4.png";
 
 const projects = {
   programming: [
@@ -63,15 +64,17 @@ const projects = {
   ],
   multimedia: [
     {
-      id: "ppdb_al_fadilah",
-      title: "PPDB MA Al-Fadilah Cipatat",
+      id: "poster_infografis",
+      title: "Poster Infografis",
+      hasDetail: false,
+      creator: "Siti Auliya",
       description:
-        "Perancangan antarmuka pengguna (UI/UX) untuk website PPDB MA Al-Fadilah Cipatat. Proyek ini mencakup desain navigasi utama, tata letak halaman, dan identitas visual yang menarik dan responsif untuk meningkatkan pengalaman pengguna.",
-      image: Mulmed1,
-      techStack: ["Figma"],
-      demoUrl:
-        "https://www.figma.com/proto/RtIb7yHoLK2tDGd7UmTYta/mockup-1?node-id=2206-87&scaling=scale-down&content-scaling=fixed&page-id=2162%3A353&starting-point-node-id=2256%3A825",
-      category: "UI/UX Design",
+        "Poster ini menggunakan kombinasi elemen visual (ilustrasi kartun, ikon, warna) dan teks singkat untuk menyajikan informasi yang kompleks secara ringkas, padat, dan menarik. Poster ini dibuat untuk memberikan pengetahuan dan pemahaman kepada audiens mengenai apa itu Emotional Intelligence, mengapa itu penting di dunia kerja, dan bagaimana cara meningkatkannya.",
+      image: Mulmed4,
+      techStack: ["Canva"],
+      // demoUrl: "-",
+      category: "Poster",
+      year: "2025",
     },
     {
       id: "hot_chocolate",
@@ -98,6 +101,17 @@ const projects = {
       // demoUrl: "-",
       category: "Poster",
       year: "2025",
+    },
+    {
+      id: "ppdb_al_fadilah",
+      title: "PPDB MA Al-Fadilah Cipatat",
+      description:
+        "Perancangan antarmuka pengguna (UI/UX) untuk website PPDB MA Al-Fadilah Cipatat. Proyek ini mencakup desain navigasi utama, tata letak halaman, dan identitas visual yang menarik dan responsif untuk meningkatkan pengalaman pengguna.",
+      image: Mulmed1,
+      techStack: ["Figma"],
+      demoUrl:
+        "https://www.figma.com/proto/RtIb7yHoLK2tDGd7UmTYta/mockup-1?node-id=2206-87&scaling=scale-down&content-scaling=fixed&page-id=2162%3A353&starting-point-node-id=2256%3A825",
+      category: "UI/UX Design",
     },
   ],
 };

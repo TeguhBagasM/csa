@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaEnvelope, FaGraduationCap, FaAward, FaUsers, FaUser } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Pembina from "../assets/pembina.jpeg";
+import FCewe from "../assets/members/cewe.svg";
+import FCowo from "../assets/members/cowo.svg";
 
 const PembinaFounder = ({ darkMode = false }) => {
   const [activeSection, setActiveSection] = useState("pembina");
@@ -24,15 +27,8 @@ const PembinaFounder = ({ darkMode = false }) => {
     id: 1,
     name: "Adi Raharjo, S.Kom., M.M",
     position: "IT MANAGER",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: Pembina,
     bio: "Seorang akademisi berpengalaman dengan fokus pada pengembangan software dan teknologi informasi.",
-    expertise: [
-      "IT Infrastructure Management",
-      "Project Management",
-      "IT Service Management",
-      "Enterprise Network",
-    ],
     education: "S2 Magister Manajemen - Universitas Pendidikan Indonesia",
     experience: "15+ tahun",
     achievements: ["Research Excellence Award", "Community Service Recognition"],
@@ -46,36 +42,31 @@ const PembinaFounder = ({ darkMode = false }) => {
       id: 1,
       name: "Kang Dion",
       position: "Chief Executive Officer",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: FCowo,
     },
     {
       id: 2,
       name: "Kang Febri",
       position: "HR BCA",
-      image:
-        "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face",
+      image: FCowo,
     },
     {
       id: 3,
       name: "Kang Ilman",
       position: "Chief Academic Officer",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      image: FCowo,
     },
     {
       id: 4,
-      name: "Teh Yanti",
-      position: "Chief Marketing Officer",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      name: "Kang Fauzi",
+      position: "Chief Operations Officer",
+      image: FCowo,
     },
     {
       id: 5,
-      name: "Kang Fauzi",
-      position: "Chief Operations Officer",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+      name: "Teh Yanti",
+      position: "Chief Marketing Officer",
+      image: FCewe,
     },
   ];
 
@@ -189,7 +180,7 @@ const PembinaFounder = ({ darkMode = false }) => {
             </h3>
 
             {/* Posisi/Jabatan */}
-            <p className={`text-base font-medium ${darkMode ? "text-teal-400" : "text-teal-600"}`}>
+            <p className={`text-base font-medium ${darkMode ? "text-blue-400" : "text-blue-600"}`}>
               {founder.position}
             </p>
           </div>
@@ -237,7 +228,7 @@ const PembinaFounder = ({ darkMode = false }) => {
               <FaUser className="mr-2" size={16} />
               Pembina
             </button>
-            <button
+            {/* <button
               onClick={() => setActiveSection("founders")}
               className={`flex cursor-pointer items-center px-6 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
                 activeSection === "founders"
@@ -249,7 +240,7 @@ const PembinaFounder = ({ darkMode = false }) => {
             >
               <FaUsers className="mr-2" size={16} />
               Founders
-            </button>
+            </button> */}
           </div>
         </div>
 
