@@ -1,5 +1,5 @@
-import memberCowo from "../assets/members/cowo.svg";
-import memberCewe from "../assets/members/cewe.svg";
+import memberCowo from "../assets/members/cowo.png";
+import memberCewe from "../assets/members/cewe.png";
 
 const members = [
   {

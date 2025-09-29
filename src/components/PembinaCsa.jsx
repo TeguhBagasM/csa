@@ -3,8 +3,7 @@ import { FaLinkedin, FaEnvelope, FaGraduationCap, FaAward, FaUsers, FaUser } fro
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Pembina from "../assets/pembina.jpeg";
-import FCewe from "../assets/members/cewe.svg";
-import FCowo from "../assets/members/cowo.svg";
+import Founders from "../assets/founders.png";
 
 const PembinaFounder = ({ darkMode = false }) => {
   const [activeSection, setActiveSection] = useState("pembina");
@@ -40,33 +39,33 @@ const PembinaFounder = ({ darkMode = false }) => {
   const foundersData = [
     {
       id: 1,
-      name: "Kang Dion",
+      name: "Diansyah, S.Kom",
       position: "Chief Executive Officer",
-      image: FCowo,
+      image: Founders,
     },
     {
       id: 2,
-      name: "Kang Febri",
-      position: "HR BCA",
-      image: FCowo,
+      name: "Febri Ridwansyah, S.Kom",
+      position: "HR Generalist",
+      image: Founders,
     },
     {
       id: 3,
       name: "Kang Ilman",
-      position: "Chief Academic Officer",
-      image: FCowo,
+      position: "-",
+      image: Founders,
     },
     {
       id: 4,
       name: "Kang Fauzi",
-      position: "Chief Operations Officer",
-      image: FCowo,
+      position: "-",
+      image: Founders,
     },
     {
       id: 5,
       name: "Teh Yanti",
-      position: "Chief Marketing Officer",
-      image: FCewe,
+      position: "-",
+      image: Founders,
     },
   ];
 
@@ -228,7 +227,7 @@ const PembinaFounder = ({ darkMode = false }) => {
               <FaUser className="mr-2" size={16} />
               Pembina
             </button>
-            {/* <button
+            <button
               onClick={() => setActiveSection("founders")}
               className={`flex cursor-pointer items-center px-6 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
                 activeSection === "founders"
@@ -240,7 +239,7 @@ const PembinaFounder = ({ darkMode = false }) => {
             >
               <FaUsers className="mr-2" size={16} />
               Founders
-            </button> */}
+            </button>
           </div>
         </div>
 

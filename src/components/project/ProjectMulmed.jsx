@@ -268,7 +268,7 @@ const ProjectMultimedia = ({ darkMode }) => {
               <div className="space-y-4">
                 <div className="flex flex-wrap items-start gap-4">
                   <h2
-                    className={`text-2xl font-bold flex-1 ${
+                    className={`text-lg sm:text-xl md:text-2xl font-bold flex-1 ${
                       darkMode ? "text-white" : "text-gray-800"
                     }`}
                   >
