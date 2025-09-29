@@ -7,7 +7,8 @@ import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
 import Mulmed3 from "../assets/projects/multimedia/mulmed3.jpg";
 import Mulmed4 from "../assets/projects/multimedia/mulmed4.png";
-import Mulmed5 from "../assets/projects/multimedia/mulmed5.png";
+import Mulmed5 from "../assets/projects/multimedia/mulmed5.jpg";
+import Thumbnail from "../assets/projects/multimedia/thumbnaill.jpg";
 
 const projects = {
   programming: [
@@ -110,7 +111,7 @@ const projects = {
       creator: ["Nur Auliya Putri", "Siti Auliya", "Evi Febryanti"],
       description:
         "Video Iklan Layanan Masyarakat ini mengangkat tema literasi dengan menampilkan perjalanan pengetahuan yang menginspirasi. Melalui visual dan narasi, karya ini menggambarkan bahwa setiap langkah dalam kehidupan dapat menjadi kesempatan untuk menumbuhkan semangat membaca dan memperluas wawasan.",
-      image: Mulmed3,
+      image: Thumbnail,
       techStack: ["Adobe Premiere"],
       demoUrl: "https://youtu.be/E-62OxOWfpw?si=mvJCkYaEgxkhqoUq",
       category: "Video",
