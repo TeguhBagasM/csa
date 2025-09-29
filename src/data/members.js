@@ -161,7 +161,7 @@ const members = [
     division: "Divisi Multimedia",
     batch: "Angkatan 7",
     socialMedia: {
-      instagram: "https://instagram.com/",
+      instagram: "https://instagram.com/farhanptm45_",
       facebook: "https://facebook.com/",
       linkedin: "https://linkedin.com/in/",
       twitter: "https://twitter.com/",
