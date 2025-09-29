@@ -67,10 +67,10 @@ const Step2 = ({ formData, handleChange, nextStep, prevStep, darkMode }) => {
 
       <div className="mb-3 sm:mb-4">
         <label className="block mb-1 sm:mb-2 font-medium text-sm sm:text-base">
-          Skala Pemahaman Divisi (1-4) <span className="text-red-500">*</span>
+          Skala Pemahaman Divisi (1-3) <span className="text-red-500">*</span>
         </label>
         <div className="flex flex-wrap gap-4">
-          {[1, 2, 3, 4].map((num) => (
+          {[1, 2, 3].map((num) => (
             <div key={num} className="flex items-center">
               <input
                 type="radio"
@@ -88,7 +88,7 @@ const Step2 = ({ formData, handleChange, nextStep, prevStep, darkMode }) => {
           ))}
         </div>
         <p className={`text-xs mt-1 ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
-          1: Pemula, 2: Dasar, 3: Menengah, 4: Mahir
+          1: Pemula, 3: Menengah, 4: Mahir
         </p>
       </div>
 
