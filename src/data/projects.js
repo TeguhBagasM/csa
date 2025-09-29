@@ -104,6 +104,19 @@ const projects = {
       year: "2025",
     },
     {
+      id: "video_iklan_literasi",
+      title: "Video Iklan Layanan Masyarakat - Literasi",
+      hasDetail: false,
+      creator: ["Nur Auliya Putri", "Siti Auliya", "Evi Febryanti"],
+      description:
+        "Video Iklan Layanan Masyarakat ini mengangkat tema literasi dengan menampilkan perjalanan pengetahuan yang menginspirasi. Melalui visual dan narasi, karya ini menggambarkan bahwa setiap langkah dalam kehidupan dapat menjadi kesempatan untuk menumbuhkan semangat membaca dan memperluas wawasan.",
+      image: Mulmed3,
+      techStack: ["Adobe Premiere"],
+      demoUrl: "https://youtu.be/E-62OxOWfpw?si=mvJCkYaEgxkhqoUq",
+      category: "Video",
+      year: "2023",
+    },
+    {
       id: "iklan_literasi",
       title: "Poster Iklan Layanan Masyarakat",
       hasDetail: false,
