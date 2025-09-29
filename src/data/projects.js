@@ -7,6 +7,7 @@ import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
 import Mulmed3 from "../assets/projects/multimedia/mulmed3.jpg";
 import Mulmed4 from "../assets/projects/multimedia/mulmed4.png";
+import Mulmed5 from "../assets/projects/multimedia/mulmed5.png";
 
 const projects = {
   programming: [
@@ -101,6 +102,19 @@ const projects = {
       // demoUrl: "-",
       category: "Poster",
       year: "2025",
+    },
+    {
+      id: "iklan_literasi",
+      title: "Poster Iklan Layanan Masyarakat",
+      hasDetail: false,
+      creator: "Nur Auliya Putri",
+      description:
+        "Poster Iklan Layanan Masyarakat ini mengangkat tema literasi dengan pesan bahwa 'the world belongs to those who read'. Poster ini dibuat untuk mengingatkan pentingnya budaya membaca sebagai pintu menuju pengetahuan dan masa depan yang lebih baik. Desain dikerjakan menggunakan Adobe Photoshop dengan fokus pada penyusunan elemen visual yang komunikatif dan inspiratif.",
+      image: Mulmed5,
+      techStack: ["Adobe Photoshop"],
+      // demoUrl: "-",
+      category: "Poster",
+      year: "2023",
     },
     {
       id: "ppdb_al_fadilah",
