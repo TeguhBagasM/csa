@@ -8,6 +8,7 @@ import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
 import Mulmed3 from "../assets/projects/multimedia/mulmed3.jpg";
 import Mulmed4 from "../assets/projects/multimedia/mulmed4.png";
 import Mulmed5 from "../assets/projects/multimedia/mulmed5.jpg";
+import Mulmed6 from "../assets/projects/multimedia/mulmed6.jpeg";
 import Thumbnail from "../assets/projects/multimedia/thumbnaill.jpg";
 
 const projects = {
@@ -65,6 +66,19 @@ const projects = {
     },
   ],
   multimedia: [
+    {
+      id: "photostrip_design",
+      title: "Photostrip Design - OSMARU SMTIK MI 2025",
+      hasDetail: false,
+      creator: ["Nur", "Sidqi", "Riski", "Mita", "Mima", "Iasha"],
+      description:
+        "Photostrip Design ini merupakan rancangan frame foto yang digunakan untuk booth photo atau photobooth 'Panoricam'. Desain ini dibuat secara khusus untuk memeriahkan acara OSMARU SMTIK MI 2025, dengan tujuan memberikan pengalaman berfoto yang lebih seru, estetik, dan berkesan bagi para peserta.",
+      image: Mulmed6,
+      techStack: ["Adobe Illustrator", "Canva"],
+      // demoUrl: "-",
+      category: "Design",
+      year: "2025",
+    },
     {
       id: "poster_infografis",
       title: "Poster Infografis",
