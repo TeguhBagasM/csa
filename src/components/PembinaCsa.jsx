@@ -51,19 +51,19 @@ const PembinaFounder = ({ darkMode = false }) => {
     },
     {
       id: 3,
-      name: "Kang Ilman",
+      name: "Ilman nurhakim, S.Kom",
       position: "-",
       image: Founders,
     },
     {
       id: 4,
-      name: "Kang Fauzi",
+      name: "M. Fauzi ramadhan, S.Kom",
       position: "-",
       image: Founders,
     },
     {
       id: 5,
-      name: "Teh Yanti",
+      name: "Yanti mandasari, S.Kom",
       position: "-",
       image: Founders,
     },
