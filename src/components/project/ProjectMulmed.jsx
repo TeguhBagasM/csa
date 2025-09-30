@@ -11,7 +11,8 @@ const ProjectMultimedia = ({ darkMode }) => {
   const projects = dataMultimedia.multimedia || [];
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [activeProjectIndex, setActiveProjectIndex] = useState(null);
-  const [modalProject, setModalProject] = useState(null);
+  const [modalProjects, setModalProjects] = useState(null);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
   const navigate = useNavigate();
 
@@ -42,6 +43,49 @@ const ProjectMultimedia = ({ darkMode }) => {
     AOS.refresh();
   }, [darkMode]);
 
+  // Fungsi untuk grouping projects berdasarkan creator dan category
+  const groupProjects = (projectsList) => {
+    const grouped = {};
+
+    projectsList.forEach((project) => {
+      // Normalisasi creator (array atau string)
+      const creatorKey = Array.isArray(project.creator)
+        ? project.creator.sort().join(", ")
+        : project.creator;
+
+      const key = `${creatorKey}|||${project.category}|||${project.hasDetail}`;
+
+      if (!grouped[key]) {
+        grouped[key] = [];
+      }
+      grouped[key].push(project);
+    });
+
+    // Convert ke array dan flatten single projects
+    return Object.values(grouped).map((group) => {
+      if (group.length === 1) {
+        return { ...group[0], isGroup: false };
+      }
+      return {
+        isGroup: true,
+        projects: group,
+        creator: group[0].creator,
+        category: group[0].category,
+        hasDetail: group[0].hasDetail,
+        // Ambil image dari project pertama untuk thumbnail
+        image: group[0].image,
+        title: `${
+          Array.isArray(group[0].creator) ? group[0].creator.join(", ") : group[0].creator
+        } - ${group[0].category}`,
+        techStack: [...new Set(group.flatMap((p) => p.techStack))],
+        description: `${group.length} proyek ${group[0].category}`,
+        year: group[0].year,
+      };
+    });
+  };
+
+  const groupedProjects = groupProjects(projects);
+
   const handleDetail = (projectId) => {
     navigate(`/karya-multimedia/${projectId}`);
   };
@@ -50,44 +94,46 @@ const ProjectMultimedia = ({ darkMode }) => {
     setActiveProjectIndex(activeProjectIndex === index ? null : index);
   };
 
-  const openModal = (project) => {
-    setModalProject(project);
+  const openModal = (projectOrGroup) => {
+    if (projectOrGroup.isGroup) {
+      setModalProjects(projectOrGroup.projects);
+    } else {
+      setModalProjects([projectOrGroup]);
+    }
+    setActiveTabIndex(0);
     document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
-    setModalProject(null);
+    setModalProjects(null);
+    setActiveTabIndex(0);
     document.body.style.overflow = "unset";
   };
 
-  // Close modal when clicking outside
   const handleModalClick = (e) => {
     if (e.target === e.currentTarget) {
       closeModal();
     }
   };
 
-  // Close modal on escape key
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === "Escape" && modalProject) {
+      if (e.key === "Escape" && modalProjects) {
         closeModal();
       }
     };
     document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
-  }, [modalProject]);
+  }, [modalProjects]);
 
-  // Fungsi untuk mengecek apakah project memiliki halaman detail
   const hasDetailPage = (project) => {
-    // Jika hasDetail tidak didefinisikan, default ke true (ada tombol detail)
-    // Jika hasDetail: false, maka tidak ada tombol detail
     return project.hasDetail !== false && project.id;
   };
 
-  // Tentukan project yang akan ditampilkan
-  const displayedProjects = showAll ? projects : projects.slice(0, INITIAL_DISPLAY_COUNT);
-  const hasMoreProjects = projects.length > INITIAL_DISPLAY_COUNT;
+  const displayedProjects = showAll
+    ? groupedProjects
+    : groupedProjects.slice(0, INITIAL_DISPLAY_COUNT);
+  const hasMoreProjects = groupedProjects.length > INITIAL_DISPLAY_COUNT;
 
   if (projects.length === 0) {
     return (
@@ -111,9 +157,10 @@ const ProjectMultimedia = ({ darkMode }) => {
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {displayedProjects.map((project, index) => {
+        {displayedProjects.map((item, index) => {
           const isExpanded = expandedIndex === index;
           const isActive = activeProjectIndex === index;
+          const isGroup = item.isGroup;
 
           return (
             <div
@@ -133,10 +180,16 @@ const ProjectMultimedia = ({ darkMode }) => {
                 onMouseLeave={() => setActiveProjectIndex(null)}
               >
                 <img
-                  src={project.image}
-                  alt={project.title}
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-48 object-cover transition-transform duration-300 ease-in-out"
                 />
+                {/* Badge untuk group */}
+                {isGroup && (
+                  <div className="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    {item.projects.length} Proyek
+                  </div>
+                )}
                 <div
                   className={`
                     absolute inset-0 bg-black/50 flex flex-col 
@@ -146,9 +199,9 @@ const ProjectMultimedia = ({ darkMode }) => {
                     sm:group-hover:opacity-100 sm:group-hover:translate-y-0
                   `}
                 >
-                  {project.demoUrl && (
+                  {!isGroup && item.demoUrl && (
                     <a
-                      href={project.demoUrl}
+                      href={item.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-lg flex items-center gap-2 text-gray-100 px-4 
@@ -170,12 +223,11 @@ const ProjectMultimedia = ({ darkMode }) => {
                       darkMode ? "text-gray-200" : "text-gray-800"
                     }`}
                   >
-                    {project.title}
+                    {item.title}
                   </h3>
-                  {/* Tombol detail atau modal berdasarkan hasDetailPage */}
-                  {hasDetailPage(project) ? (
+                  {!isGroup && hasDetailPage(item) ? (
                     <button
-                      onClick={() => handleDetail(project.id)}
+                      onClick={() => handleDetail(item.id)}
                       className={`${
                         darkMode
                           ? "text-gray-400 hover:bg-gray-600 hover:text-white"
@@ -186,7 +238,7 @@ const ProjectMultimedia = ({ darkMode }) => {
                     </button>
                   ) : (
                     <button
-                      onClick={() => openModal(project)}
+                      onClick={() => openModal(item)}
                       className={`${
                         darkMode
                           ? "text-gray-400 hover:bg-gray-600 hover:text-white"
@@ -203,10 +255,10 @@ const ProjectMultimedia = ({ darkMode }) => {
                     ${darkMode ? "bg-blue-500/20 text-blue-300" : "bg-blue-100 text-blue-600"}
                   `}
                 >
-                  {project.category}
+                  {item.category}
                 </span>
                 <div className="flex flex-wrap gap-2 mb-3">
-                  {project.techStack.map((tech, techIndex) => (
+                  {item.techStack.map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className={`
@@ -219,9 +271,9 @@ const ProjectMultimedia = ({ darkMode }) => {
                   ))}
                 </div>
                 <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                  {isExpanded ? project.description : `${project.description.slice(0, 100)}...`}
+                  {isExpanded ? item.description : `${item.description.slice(0, 100)}...`}
                 </p>
-                {project.description.length > 100 && (
+                {item.description.length > 100 && (
                   <button
                     onClick={() => setExpandedIndex(isExpanded ? null : index)}
                     className="text-blue-500 text-sm mt-2 cursor-pointer"
@@ -235,7 +287,6 @@ const ProjectMultimedia = ({ darkMode }) => {
         })}
       </div>
 
-      {/* Tombol Tampilkan Lebih Banyak / Sembunyikan */}
       {hasMoreProjects && (
         <div className="flex justify-center mt-8">
           <button
@@ -252,13 +303,13 @@ const ProjectMultimedia = ({ darkMode }) => {
           >
             {showAll
               ? "Sembunyikan"
-              : `Tampilkan Lebih Banyak (${projects.length - INITIAL_DISPLAY_COUNT} lainnya)`}
+              : `Tampilkan Lebih Banyak (${groupedProjects.length - INITIAL_DISPLAY_COUNT} lainnya)`}
           </button>
         </div>
       )}
 
-      {/* Modal untuk menampilkan project detail */}
-      {modalProject && (
+      {/* Modal dengan Tab Navigation */}
+      {modalProjects && (
         <div
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
           onClick={handleModalClick}
@@ -270,7 +321,6 @@ const ProjectMultimedia = ({ darkMode }) => {
             `}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
             <button
               onClick={closeModal}
               className={`
@@ -286,101 +336,136 @@ const ProjectMultimedia = ({ darkMode }) => {
               <FiX className="text-xl" />
             </button>
 
-            {/* Modal content */}
-            <div className="p-6">
-              {/* Image */}
-              <div className="mb-6">
-                <img
-                  src={modalProject.image}
-                  alt={modalProject.title}
-                  className="w-full h-auto max-h-96 object-contain rounded-lg"
-                />
-              </div>
-
-              {/* Project info */}
-              <div className="space-y-4">
-                <div className="flex flex-wrap items-start gap-4">
-                  <h2
-                    className={`text-lg sm:text-xl md:text-2xl font-bold flex-1 ${
-                      darkMode ? "text-white" : "text-gray-800"
-                    }`}
-                  >
-                    {modalProject.title}
-                  </h2>
-                  {modalProject.demoUrl && (
-                    <a
-                      href={modalProject.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg 
-                      hover:bg-blue-600 transition-colors font-medium"
-                    >
-                      <FiExternalLink />
-                      Demo
-                    </a>
-                  )}
-                </div>
-
-                {/* Creator/Author info */}
-                {modalProject.creator && (
-                  <div
-                    className={`flex items-center gap-2 ${
-                      darkMode ? "text-gray-300" : "text-gray-600"
-                    }`}
-                  >
-                    <span className="font-medium">Dibuat oleh:</span>
-                    <span className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}>
-                      {Array.isArray(modalProject.creator)
-                        ? modalProject.creator.join(", ")
-                        : modalProject.creator}
-                    </span>
-                  </div>
-                )}
-
-                <div className="flex flex-wrap items-center gap-3">
-                  <span
-                    className={`
-                      text-sm px-3 py-1 rounded-full
-                      ${darkMode ? "bg-blue-500/20 text-blue-300" : "bg-blue-100 text-blue-600"}
-                    `}
-                  >
-                    {modalProject.category}
-                  </span>
-
-                  {modalProject.year && (
-                    <span
+            {/* Tab Navigation - Only show if multiple projects */}
+            {modalProjects.length > 1 && (
+              <div className={`border-b ${darkMode ? "border-gray-700" : "border-gray-200"}`}>
+                <div className="flex overflow-x-auto p-4 gap-2">
+                  {modalProjects.map((project, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveTabIndex(idx)}
                       className={`
-                        text-sm px-3 py-1 rounded-full
-                        ${darkMode ? "bg-green-500/20 text-green-300" : "bg-green-100 text-green-600"}
+                        px-4 py-2 rounded-lg whitespace-nowrap transition-all cursor-pointer
+                        ${
+                          activeTabIndex === idx
+                            ? darkMode
+                              ? "bg-blue-600 text-white"
+                              : "bg-blue-500 text-white"
+                            : darkMode
+                            ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        }
                       `}
                     >
-                      {modalProject.year}
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {modalProject.techStack.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className={`
-                        text-sm px-3 py-1 rounded-full
-                        ${darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-600"}
-                      `}
-                    >
-                      {tech}
-                    </span>
+                      {project.title}
+                    </button>
                   ))}
                 </div>
-
-                <p
-                  className={`text-base leading-relaxed ${
-                    darkMode ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
-                  {modalProject.description}
-                </p>
               </div>
+            )}
+
+            {/* Modal content */}
+            <div className="p-6">
+              {modalProjects[activeTabIndex] && (
+                <>
+                  <div className="mb-6">
+                    <img
+                      src={modalProjects[activeTabIndex].image}
+                      alt={modalProjects[activeTabIndex].title}
+                      className="w-full h-auto max-h-96 object-contain rounded-lg"
+                    />
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap items-start gap-4">
+                      <h2
+                        className={`text-lg sm:text-xl md:text-2xl font-bold flex-1 ${
+                          darkMode ? "text-white" : "text-gray-800"
+                        }`}
+                      >
+                        {modalProjects[activeTabIndex].title}
+                      </h2>
+                      {modalProjects[activeTabIndex].demoUrl && (
+                        <a
+                          href={modalProjects[activeTabIndex].demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg 
+                          hover:bg-blue-600 transition-colors font-medium"
+                        >
+                          <FiExternalLink />
+                          Demo
+                        </a>
+                      )}
+                    </div>
+
+                    {modalProjects[activeTabIndex].creator && (
+                      <div
+                        className={`flex items-center gap-2 ${
+                          darkMode ? "text-gray-300" : "text-gray-600"
+                        }`}
+                      >
+                        <span className="font-medium">Dibuat oleh:</span>
+                        <span
+                          className={`${darkMode ? "text-blue-300" : "text-blue-600"} font-medium`}
+                        >
+                          {Array.isArray(modalProjects[activeTabIndex].creator)
+                            ? modalProjects[activeTabIndex].creator.join(", ")
+                            : modalProjects[activeTabIndex].creator}
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span
+                        className={`
+                          text-sm px-3 py-1 rounded-full
+                          ${darkMode ? "bg-blue-500/20 text-blue-300" : "bg-blue-100 text-blue-600"}
+                        `}
+                      >
+                        {modalProjects[activeTabIndex].category}
+                      </span>
+
+                      {modalProjects[activeTabIndex].year && (
+                        <span
+                          className={`
+                            text-sm px-3 py-1 rounded-full
+                            ${
+                              darkMode
+                                ? "bg-green-500/20 text-green-300"
+                                : "bg-green-100 text-green-600"
+                            }
+                          `}
+                        >
+                          {modalProjects[activeTabIndex].year}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {modalProjects[activeTabIndex].techStack.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className={`
+                            text-sm px-3 py-1 rounded-full
+                            ${darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-100 text-gray-600"}
+                          `}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p
+                      className={`text-base leading-relaxed ${
+                        darkMode ? "text-gray-300" : "text-gray-600"
+                      }`}
+                    >
+                      {modalProjects[activeTabIndex].description}
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
