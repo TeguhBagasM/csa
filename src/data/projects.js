@@ -2,6 +2,7 @@ import quizzyCsa from "../assets/projects/pemrograman/quizzy.png";
 import spendTvise from "../assets/projects/pemrograman/spendtvise.png";
 import panoriCam from "../assets/projects/pemrograman/panori.png";
 import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
+import Thieverse from "../assets/projects/pemrograman/thieverse.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
@@ -12,6 +13,7 @@ import Mulmed6 from "../assets/projects/multimedia/mulmed6.jpeg";
 import Mulmed7 from "../assets/projects/multimedia/mulmed7.jpeg";
 import Mulmed8 from "../assets/projects/multimedia/mulmed8.jpeg";
 import Mulmed9 from "../assets/projects/multimedia/mulmed9.jpeg";
+import Mulmed10 from "../assets/projects/multimedia/mulmed10.jpeg";
 import Thumbnail from "../assets/projects/multimedia/thumbnaill.jpg";
 
 const projects = {
@@ -66,6 +68,22 @@ const projects = {
       demoUrl: "https://spendtvise.vercel.app/",
       isRepo: false,
       status: "Completed",
+      hasDetail: true,
+    },
+    {
+      id: "thieverse",
+      title: "Thieverse",
+      description:
+        "Thieverse adalah website personal portfolio sekaligus blog teknologi yang menampilkan karya dan tulisan seputar dunia IT. Dibangun dengan Next.js 14, Velite, Tailwind CSS, Shadcn/ui, dan TypeScript, Thieverse menghadirkan tampilan modern, performa cepat, dan pengalaman pengguna yang nyaman",
+      image: Thieverse,
+      techStack: ["Next.js", "TypeScript", "TailwindCSS", "Velite", "Shadcn/ui"],
+      year: "2024",
+      demoUrl: "https://thieverse.vercel.app/",
+      githubUrl: false,
+      team: "Teguh Bagas M",
+      timeline: "Maret 2024 - Juni 2024",
+      status: "Completed",
+      hasDetail: false,
     },
   ],
   multimedia: [
@@ -104,6 +122,19 @@ const projects = {
       description:
         "3D model ini dibuat menggunakan Blender dengan konsep dessert manis berupa pudding berlapis saus cokelat, dihiasi dengan sebatang cokelat, dua stik wafer, dan sebuah ceri di atasnya. Desain ini menonjolkan gaya minimalis dengan warna cerah dan kontras untuk memberikan kesan playful serta menggugah selera. Visual yang sederhana namun detail ini dapat digunakan sebagai aset ilustrasi digital, materi promosi, atau elemen dekoratif pada media kreatif.",
       image: Mulmed9,
+      techStack: ["Blender"],
+      // demoUrl: "-",
+      category: "3D Design",
+      year: "2025",
+    },
+    {
+      id: "3d_mushroom_house",
+      title: "3D Mushroom House",
+      hasDetail: false,
+      creator: "Cellomita Rahdianti Putri",
+      description:
+        "3D model ini dibuat menggunakan Blender dengan konsep rumah jamur bergaya fantasi. Desain menampilkan sebuah rumah berbentuk jamur berwarna merah dengan bintik putih, dilengkapi pintu kayu, pagar sederhana, bebatuan, dan jalan setapak di atas rumput hijau. Model ini mengusung gaya low poly yang minimalis namun tetap detail, sehingga cocok digunakan untuk aset game, ilustrasi, atau proyek visual kreatif bertema dongeng dan fantasi.",
+      image: Mulmed10,
       techStack: ["Blender"],
       // demoUrl: "-",
       category: "3D Design",
