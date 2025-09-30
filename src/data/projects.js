@@ -9,6 +9,9 @@ import Mulmed3 from "../assets/projects/multimedia/mulmed3.jpg";
 import Mulmed4 from "../assets/projects/multimedia/mulmed4.png";
 import Mulmed5 from "../assets/projects/multimedia/mulmed5.jpg";
 import Mulmed6 from "../assets/projects/multimedia/mulmed6.jpeg";
+import Mulmed7 from "../assets/projects/multimedia/mulmed7.jpeg";
+import Mulmed8 from "../assets/projects/multimedia/mulmed8.jpeg";
+import Mulmed9 from "../assets/projects/multimedia/mulmed9.jpeg";
 import Thumbnail from "../assets/projects/multimedia/thumbnaill.jpg";
 
 const projects = {
@@ -77,6 +80,46 @@ const projects = {
       techStack: ["Adobe Illustrator", "Canva"],
       // demoUrl: "-",
       category: "Design",
+      year: "2025",
+    },
+    {
+      id: "ui_logistik_mau_maju",
+      title: "UI Mobile Perusahaan Logistik 'Mau Maju'",
+      hasDetail: false,
+      creator: "Cellomita Rahdianti Putri",
+      description:
+        "UI mobile ini merupakan hasil perancangan sistem informasi untuk perusahaan logistik 'Mau Maju'. Desain dibuat menggunakan Figma dengan fokus pada kemudahan pengguna dalam melakukan pelacakan pengiriman, input data pengiriman, dan monitoring status barang secara real-time. Tampilan dirancang menggunakan kombinasi warna merah dan putih untuk memberikan kesan profesional, tegas, serta sesuai dengan identitas brand. Prototype ini menampilkan alur mulai dari login, dashboard pengiriman, form input, hingga detail tracking berbasis peta.",
+      image: Mulmed8,
+      techStack: ["Figma"],
+      demoUrl:
+        "https://www.figma.com/proto/fZNR87gsaOlfJaZ8nv4B7W/PERANCANGAN-SISTEM-INFORMASI---UI-MAU-MAJU-LOGISTIK?node-id=62-2&t=l9IfaFpqKu6tf5lM-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=62%3A2",
+      category: "UI/UX Design",
+      year: "2025",
+    },
+    {
+      id: "3d_dessert_model",
+      title: "3D Dessert Model",
+      hasDetail: false,
+      creator: "Cellomita Rahdianti Putri",
+      description:
+        "3D model ini dibuat menggunakan Blender dengan konsep dessert manis berupa pudding berlapis saus cokelat, dihiasi dengan sebatang cokelat, dua stik wafer, dan sebuah ceri di atasnya. Desain ini menonjolkan gaya minimalis dengan warna cerah dan kontras untuk memberikan kesan playful serta menggugah selera. Visual yang sederhana namun detail ini dapat digunakan sebagai aset ilustrasi digital, materi promosi, atau elemen dekoratif pada media kreatif.",
+      image: Mulmed9,
+      techStack: ["Blender"],
+      // demoUrl: "-",
+      category: "3D Design",
+      year: "2025",
+    },
+    {
+      id: "banner_Promisi",
+      title: "Banner Promosi",
+      hasDetail: false,
+      creator: "Muhamad Riski R",
+      description:
+        "Banner promosi ini adalah hasil desain grafis menggunakan CorelDRAW dengan tujuan mempromosikan produk sepatu terbaru dari KIISAJA Footwear. Desain ini menampilkan koleksi sepatu eksklusif dengan gaya modern Visual menggunakan kombinasi warna biru dengan tipografi tegas untuk menonjolkan brand identity, serta tata letak produk yang rapi agar pesan promosi tersampaikan secara jelas, menarik, dan profesional.",
+      image: Mulmed7,
+      techStack: ["CorelDRAW"],
+      // demoUrl: "-",
+      category: "Banner",
       year: "2025",
     },
     {
