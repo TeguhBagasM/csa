@@ -3,6 +3,7 @@ import spendTvise from "../assets/projects/pemrograman/spendtvise.png";
 import panoriCam from "../assets/projects/pemrograman/panori.png";
 import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 import Thieverse from "../assets/projects/pemrograman/thieverse.png";
+import csaLearnify from "../assets/projects/pemrograman/csa-learnify.jpeg";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
@@ -18,6 +19,21 @@ import Thumbnail from "../assets/projects/multimedia/thumbnaill.jpg";
 
 const projects = {
   programming: [
+    {
+      id: "csa_learnify",
+      title: "CSA Learnify",
+      description:
+        "CSA Learnify merupakan platform pembelajaran internal yang dirancang untuk memfasilitasi anggota CSA agar dapat belajar di mana saja dan kapan saja. Platform ini dibagi ke dalam beberapa kelas yang disesuaikan dengan tingkat kemampuan anggota, serta dilengkapi dengan mentor dari setiap divisi yang siap membimbing dalam proses pembelajaran.",
+      image: csaLearnify,
+      techStack: ["React Native", "Node JS", "Mysql"],
+      year: "2025",
+      demoUrl: "https://youtu.be/ZG5iya_eYJE",
+      githubUrl: "https://github.com/Noptzy/csa-learnify",
+      team: ["Tegar Dinar H.I", "Nida Mutmainah"],
+      timeline: "August 2025 - September 2025",
+      status: "Completed",
+      hasDetail: false,
+    },
     {
       id: "csatasktify",
       title: "CSA Tasktify",
