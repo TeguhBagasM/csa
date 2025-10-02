@@ -227,7 +227,7 @@ const PembinaFounder = ({ darkMode = false }) => {
               <FaUser className="mr-2" size={16} />
               Pembina
             </button>
-            {/* <button
+            <button
               onClick={() => setActiveSection("founders")}
               className={`flex cursor-pointer items-center px-6 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
                 activeSection === "founders"
@@ -239,7 +239,7 @@ const PembinaFounder = ({ darkMode = false }) => {
             >
               <FaUsers className="mr-2" size={16} />
               Founders
-            </button> */}
+            </button>
           </div>
         </div>
 
