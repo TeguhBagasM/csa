@@ -40,31 +40,31 @@ const PembinaFounder = ({ darkMode = false }) => {
     {
       id: 1,
       name: "Diansyah, S.Kom",
-      position: "-",
+      position: "Founder",
       image: Founders,
     },
     {
       id: 2,
       name: "Febri Ridwansyah, S.Kom",
-      position: "HR Generalist",
+      position: "Founder",
       image: Founders,
     },
     {
       id: 3,
       name: "Ilman nurhakim, S.Kom",
-      position: "-",
+      position: "Founder",
       image: Founders,
     },
     {
       id: 4,
       name: "M. Fauzi ramadhan, S.Kom",
-      position: "-",
+      position: "Founder",
       image: Founders,
     },
     {
       id: 5,
       name: "Yanti mandasari, S.Kom",
-      position: "-",
+      position: "Founder",
       image: Founders,
     },
   ];

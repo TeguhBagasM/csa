@@ -4,6 +4,7 @@ import panoriCam from "../assets/projects/pemrograman/panori.png";
 import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 import Thieverse from "../assets/projects/pemrograman/thieverse.png";
 import csaLearnify from "../assets/projects/pemrograman/csa-learnify.jpeg";
+import healthBooster from "../assets/projects/pemrograman/health-booster.jpeg";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
@@ -35,7 +36,36 @@ const projects = {
       hasDetail: false,
     },
     {
-      id: "csatasktify",
+      id: "lp_healthbooster",
+      title: "Health Booster",
+      team: "Nida Mutmainah",
+      description:
+        "Landing page Health Booster merupakan demo websiteyang dirancang khusus untuk mempromosikan dan menjual berbagai menu salad dan makanan sehat lainnya",
+      image: healthBooster,
+      techStack: ["HTML, CSS, Javascript"],
+      demoUrl: "https://mutmainahnida.github.io/Health-Booster/",
+      timeline: "June 2024 - July 2024",
+      year: "2025",
+      status: "Completed",
+      hasDetail: false,
+    },
+    {
+      id: "thieverse",
+      title: "Thieverse",
+      description:
+        "Thieverse adalah website personal portfolio sekaligus blog teknologi yang menampilkan karya dan tulisan seputar dunia IT. Dibangun dengan Next.js 14, Velite, Tailwind CSS, Shadcn/ui, dan TypeScript, Thieverse menghadirkan tampilan modern, performa cepat, dan pengalaman pengguna yang nyaman",
+      image: Thieverse,
+      techStack: ["Next.js", "TypeScript", "TailwindCSS", "Velite", "Shadcn/ui"],
+      year: "2024",
+      demoUrl: "https://thieverse.vercel.app/",
+      githubUrl: false,
+      team: "Teguh Bagas M",
+      timeline: "Maret 2024 - Juni 2024",
+      status: "Completed",
+      hasDetail: false,
+    },
+    {
+      id: "csa_tasktify",
       title: "CSA Tasktify",
       description:
         "CSA Tasktify, sebuah website To-Do List App yang dibangun menggunakan React.js, Tailwind CSS, dan Supabase sebagai backend database. Aplikasi ini dirancang untuk membantu pengguna mengelola aktivitas secara terstruktur melalui sistem kategori, task, dan subtask, serta dilengkapi dengan fitur notes untuk mencatat detail penting setiap task.",
@@ -85,21 +115,6 @@ const projects = {
       isRepo: false,
       status: "Completed",
       hasDetail: true,
-    },
-    {
-      id: "thieverse",
-      title: "Thieverse",
-      description:
-        "Thieverse adalah website personal portfolio sekaligus blog teknologi yang menampilkan karya dan tulisan seputar dunia IT. Dibangun dengan Next.js 14, Velite, Tailwind CSS, Shadcn/ui, dan TypeScript, Thieverse menghadirkan tampilan modern, performa cepat, dan pengalaman pengguna yang nyaman",
-      image: Thieverse,
-      techStack: ["Next.js", "TypeScript", "TailwindCSS", "Velite", "Shadcn/ui"],
-      year: "2024",
-      demoUrl: "https://thieverse.vercel.app/",
-      githubUrl: false,
-      team: "Teguh Bagas M",
-      timeline: "Maret 2024 - Juni 2024",
-      status: "Completed",
-      hasDetail: false,
     },
   ],
   multimedia: [
