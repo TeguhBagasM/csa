@@ -3,7 +3,8 @@ import { FaLinkedin, FaEnvelope, FaGraduationCap, FaAward, FaUsers, FaUser } fro
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Pembina from "../assets/pembina.jpeg";
-import Founders from "../assets/founders.png";
+import FoundersCewe from "../assets/members/cewe.png";
+import FoundersCowo from "../assets/members/cowo.png";
 
 const PembinaFounder = ({ darkMode = false }) => {
   const [activeSection, setActiveSection] = useState("pembina");
@@ -41,31 +42,31 @@ const PembinaFounder = ({ darkMode = false }) => {
       id: 1,
       name: "Diansyah, S.Kom",
       position: "Founder",
-      image: Founders,
+      image: FoundersCowo,
     },
     {
       id: 2,
       name: "Febri Ridwansyah, S.Kom",
       position: "Founder",
-      image: Founders,
+      image: FoundersCowo,
     },
     {
       id: 3,
       name: "Ilman nurhakim, S.Kom",
       position: "Founder",
-      image: Founders,
+      image: FoundersCowo,
     },
     {
       id: 4,
       name: "M. Fauzi ramadhan, S.Kom",
       position: "Founder",
-      image: Founders,
+      image: FoundersCowo,
     },
     {
       id: 5,
       name: "Yanti mandasari, S.Kom",
       position: "Founder",
-      image: Founders,
+      image: FoundersCewe,
     },
   ];
 
