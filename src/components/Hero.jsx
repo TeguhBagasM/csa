@@ -29,7 +29,7 @@ const Hero = ({ isRegistrationOpen, darkMode }) => {
     if (isDisabled) return;
 
     if (!isRegistrationOpen) {
-      toast.error("Pendaftaran masih ditutup! Silakan cek kembali nanti.", {
+      toast.error("Pendaftaran sudah ditutup! Silakan cek kembali nanti.", {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
