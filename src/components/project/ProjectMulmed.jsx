@@ -139,7 +139,7 @@ const ProjectMultimedia = ({ darkMode }) => {
     return (
       <div
         className={`
-        flex flex-col justify-center items-center h-48 sm:h-64 rounded-lg p-4 
+        flex flex-col mt-4 justify-center items-center h-48 sm:h-64 rounded-lg p-4 
         ${darkMode ? "bg-transparent text-gray-200" : "bg-white text-gray-800 border-gray-600"}
         ${darkMode ? "shadow-lg shadow-gray-900/50" : "shadow-md"}
       `}
@@ -147,7 +147,7 @@ const ProjectMultimedia = ({ darkMode }) => {
         <img
           src={Nodata}
           alt="No Data Available"
-          className="w-24 sm:w-32 md:w-40 mb-3 object-contain"
+          className="w-32 sm:w-40 md:w-72 mb-3 object-contain"
         />
         <p className="text-lg sm:text-xl font-semibold text-center">Data Tidak Tersedia</p>
       </div>

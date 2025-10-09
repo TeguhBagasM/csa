@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/layouts/Navbar";
 import Home from "./pages/Home";
@@ -52,7 +52,12 @@ function App() {
             />
             <Route path="/karya" element={<Project darkMode={darkMode} />} />
             <Route path="/blog" element={<Blog darkMode={darkMode} />} />
-            <Route path="/daftar" element={<Daftar darkMode={darkMode} />} />
+            <Route
+              path="/daftar"
+              element={
+                isRegistrationOpen ? <Daftar darkMode={darkMode} /> : <Navigate to="/" replace />
+              }
+            />
             <Route
               path="/karya-pemrograman/:id"
               element={<PemrogramanProjectDetail darkMode={darkMode} />}

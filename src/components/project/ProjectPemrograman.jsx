@@ -162,7 +162,7 @@ const ProjectPemrograman = ({ darkMode }) => {
         <img
           src={Nodata}
           alt="No Data Available"
-          className="w-24 sm:w-32 md:w-40 mb-3 object-contain"
+          className="w-32 sm:w-40 md:w-72 mb-3 object-contain"
         />
         <p className="text-lg sm:text-xl font-semibold text-center">Data Tidak Tersedia</p>
       </div>

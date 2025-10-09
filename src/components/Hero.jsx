@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import GifHero from "../assets/avento4.gif";
+import GifHero from "../assets/hero-bg.gif";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
