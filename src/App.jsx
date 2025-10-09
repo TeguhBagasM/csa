@@ -13,6 +13,7 @@ import PemrogramanProjectDetail from "./components/project/PemrogramanProjectDet
 import MulmedProjectDetail from "./components/project/MulmedProjectDetail";
 import Daftar from "./components/daftar/Daftar";
 import SimpleChatbaseWidget from "./components/SimpleChatbaseWidget";
+import CloseRegistration from "./pages/CloseRegistration";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -51,11 +52,12 @@ function App() {
               element={<Home darkMode={darkMode} isRegistrationOpen={isRegistrationOpen} />}
             />
             <Route path="/karya" element={<Project darkMode={darkMode} />} />
-            <Route path="/blog" element={<Blog darkMode={darkMode} />} />
+            {/* <Route path="/blog" element={<Blog darkMode={darkMode} />} /> */}
+            <Route path="/close" element={<CloseRegistration darkMode={darkMode} />} />
             <Route
               path="/daftar"
               element={
-                isRegistrationOpen ? <Daftar darkMode={darkMode} /> : <Navigate to="/" replace />
+                isRegistrationOpen ? <Daftar darkMode={darkMode} /> : <Navigate to="/close" replace />
               }
             />
             <Route
