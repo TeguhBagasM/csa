@@ -16,7 +16,7 @@ import SimpleChatbaseWidget from "./components/SimpleChatbaseWidget";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
