@@ -17,7 +17,7 @@ import CloseRegistration from "./pages/CloseRegistration";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
