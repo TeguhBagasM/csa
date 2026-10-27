@@ -149,7 +149,7 @@ const Footer = ({ darkMode }) => {
             </h3>
             <div className="space-y-4">
               <a
-                href="https://wa.me/6285795686906"
+                href="https://wa.me/6282126619180"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-3 p-4 rounded-xl ${
@@ -163,7 +163,7 @@ const Footer = ({ darkMode }) => {
                   <p className={`text-xs ${darkMode ? "text-gray-400" : "text-gray-500"} mb-1`}>
                     Humas I
                   </p>
-                  <p className="text-sm font-medium">+62 857 9568 6906</p>
+                  <p className="text-sm font-medium">+62 821 2661 9180</p>
                 </div>
               </a>
 
