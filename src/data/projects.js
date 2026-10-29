@@ -5,6 +5,9 @@ import csaTasktify from "../assets/projects/pemrograman/csa-tasktify.png";
 import Thieverse from "../assets/projects/pemrograman/thieverse.png";
 import csaLearnify from "../assets/projects/pemrograman/csa-learnify.jpeg";
 import healthBooster from "../assets/projects/pemrograman/health-booster.jpeg";
+import nisrina from "../assets/projects/pemrograman/nisrina.jpeg";
+import clyn from "../assets/projects/pemrograman/clyn.png";
+import jimlyai from "../assets/projects/pemrograman/jimly-ai.png";
 
 import Mulmed1 from "../assets/projects/multimedia/mulmed1.png";
 import Mulmed2 from "../assets/projects/multimedia/mulmed2.jpeg";
@@ -16,6 +19,12 @@ import Mulmed7 from "../assets/projects/multimedia/mulmed7.jpeg";
 import Mulmed8 from "../assets/projects/multimedia/mulmed8.jpeg";
 import Mulmed9 from "../assets/projects/multimedia/mulmed9.jpeg";
 import Mulmed10 from "../assets/projects/multimedia/mulmed10.jpeg";
+import OrangeMilk from "../assets/projects/multimedia/orange-milk.jpg";
+import Soda from "../assets/projects/multimedia/soda-syrup.jpg";
+import Sushi from "../assets/projects/multimedia/sushi.jpg";
+import streetfg from "../assets/projects/multimedia/mulmed-farhan.jpeg";
+import panningfg from "../assets/projects/multimedia/mulmed-farhan2.jpeg";
+
 import Thumbnail from "../assets/projects/multimedia/thumbnaill.jpg";
 
 const projects = {
@@ -34,6 +43,50 @@ const projects = {
       timeline: "August 2025 - September 2025",
       status: "Completed",
       hasDetail: false,
+    },
+    {
+      id: "Web_Tracking_Baca",
+      title: "Website Tracking Bacaan",
+      hasDetail: false,
+      creator: "Nisrina Nur Azizah",
+      description: "Website ini adalah website berbasis CSS dan PHP dasar untuk merekam jejak bacaan buku pengguna. Pengguna dapat login dan memanfaatkan website ini untuk menambahkan buku ke koleksi. Setelah itu, pengguna dapat menyimpan buku tersebut ke kategori buku yang belum dibaca, sedang dibaca, atau telah dibaca. Dengan website sederhana ini, tracking bacaan akan jadi lebih mudah sehingga kegiatan membaca pun akan jadi lebih menyenangkan.",
+      image: nisrina,
+      techStack: ["PHP", "CSS"],
+      // demoUrl: "-",
+      category: "Website",
+      year: "2025"
+    },
+      {
+      id: "CLYN",
+      title: "CLYN - Color Accessibility Platform",
+      hasDetail: false,
+      creator: "Nida Mutmainah",
+      description: "CLYN adalah platform yang membantu orang dengan gangguan penglihatan warna mengenali warna pada benda sehari-hari melalui fitur pemindaian warna (Scan Color) dan eksplorasi warna berdasarkan kode warna. Platform ini dirancang untuk meningkatkan aksesibilitas warna dan membantu pengguna memahami warna dengan lebih mudah. CLYN mengutamakan privasi pengguna dengan pemrosesan di sisi perangkat tanpa backend.",
+      image: clyn,
+      techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      demoUrl: "https://withclyn.vercel.app/",
+      category: "Website",
+      year: "2026"
+    },
+    {
+      id: "Jimly_AI",
+      title: "Jimly AI - Chatbot Hukum",
+      hasDetail: false,
+      creator: "Nida Mutmainah",
+      description: "Jimly AI adalah chatbot hukum yang membantu pengguna memahami konsep dan persoalan hukum melalui penjelasan dengan bahasa yang sederhana dan mudah dipahami. Basis pengetahuannya mengacu pada buku-buku karya Prof. Jimly Asshiddiqie, sehingga pengguna dapat mengeksplorasi wawasan hukum dengan lebih mudah melalui interaksi percakapan.",
+      image: jimlyai,
+      techStack: [
+        "Astro",
+        "React",
+        "Tailwind CSS",
+        "Neon",
+        "Drizzle ORM",
+        "Better Auth",
+        "Vercel"
+      ],
+      demoUrl: "https://jimly-ai.vercel.app/",
+      category: "AI",
+      year: "2026"
     },
     {
       id: "lp_healthbooster",
@@ -119,6 +172,42 @@ const projects = {
   ],
   multimedia: [
     {
+      id: "3d_Sushi",
+      title: "3D Sushi",
+      hasDetail: false,
+      creator: "Cellomita Rahdianti Putri",
+      description: "Karya 3D modeling berupa visualisasi sushi yang disajikan di atas nampan berwarna coklat gelap. Objek menampilkan tiga potong sushi dengan detail tekstur nasi dan topping ikan, dilengkapi mangkuk kecil berisi saus serta sumpit sebagai pelengkap. Latar belakang merah muda dan pencahayaan yang terarah menghasilkan tampilan produk makanan yang estetik dan menarik. Seluruh visual dibuat menggunakan Blender dengan fokus pada pemodelan bentuk, material, tekstur, dan rendering.",
+      image: Sushi,
+      techStack: ["Blender"],
+      // demoUrl: "-",
+      category: "3D Modeling",
+      year: "2026"
+    },
+    {
+      id: "3d_SodaSyrup",
+      title: "3D Soda Syrup",
+      hasDetail: false,
+      creator: "Cellomita Rahdianti Putri",
+      description: "Karya 3D modeling berupa visualisasi soda syrup dalam gelas kaca transparan dengan perpaduan warna hijau dan biru. Desain menampilkan cairan berlapis warna, potongan es transparan di bagian atas, serta efek refleksi dan pembiasan cahaya pada permukaan kaca. Proses pembuatan menggunakan Blender dengan pengaturan material, pencahayaan, dan rendering untuk menghasilkan visual produk yang menarik dan realistis.",
+      image: Soda,
+      techStack: ["Blender"],
+      // demoUrl: "-",
+      category: "3D Modeling",
+      year: "2026"
+    },
+    {
+      id: "3d_OrangeMilk",
+      title: "3D Orange Milk",
+      hasDetail: false,
+      creator: "Cellomita Rahdianti Putri",
+      description: "Karya 3D modeling berupa visualisasi produk Orange Milk dengan konsep segar dan modern. Objek menampilkan kemasan minuman transparan berisi cairan berwarna oranye, buah jeruk, percikan cairan, dan tetesan air yang memberikan kesan dingin serta menyegarkan. Perpaduan warna oranye dan latar belakang merah muda, didukung material transparan dan pencahayaan lembut, menghasilkan visual produk bergaya komersial menggunakan Blender.",
+      image: OrangeMilk,
+      techStack: ["Blender"],
+      // demoUrl: "-",
+      category: "3D Modeling",
+      year: "2026"
+    },
+    {
       id: "photostrip_design",
       title: "Photostrip Design - OSMARU SMTIK MI 2025",
       hasDetail: false,
@@ -130,6 +219,30 @@ const projects = {
       // demoUrl: "-",
       category: "Design",
       year: "2025",
+    },
+    {
+      id: "Photography",
+      title: "Photography Panning Shoot",
+      hasDetail: false,
+      creator: "Asep Farhan Pratama",
+      description: "Photography dengan teknik pengambilan gambar panning shoot .",
+      image: panningfg,
+      techStack: ["Adobe Photoshop"],
+      // demoUrl: "-",
+      category: "Photography",
+      year: "2026"
+    },
+    {
+      id: "Photography",
+      title: "Street Photography",
+      hasDetail: false,
+      creator: "Asep Farhan Pratama",
+      description: "Street Photography.",
+      image: streetfg,
+      techStack: ["Adobe Photoshop"],
+      // demoUrl: "-",
+      category: "photography",
+      year: "2026"
     },
     {
       id: "ui_logistik_mau_maju",
